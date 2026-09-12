@@ -1,0 +1,32 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>Layered Skill Coverage - Pilot Report</title>
+<style>
+body{font-family:-apple-system,Segoe UI,sans-serif;max-width:900px;margin:2rem auto;padding:0 1rem;color:#1a1a1a}
+pre{white-space:pre-wrap;background:#fafafa;border:1px solid #ddd;border-radius:6px;padding:1rem}
+table{border-collapse:collapse;margin:1rem 0;width:100%}
+td,th{border:1px solid #ddd;padding:6px 10px;text-align:left;font-size:0.9rem}
+th{background:#f5f5f5}
+h2{margin-top:2.5rem;border-bottom:1px solid #ddd;padding-bottom:.3rem}
+.note{background:#fff8e1;border:1px solid #f0d98a;border-radius:6px;padding:.75rem 1rem;font-size:.9rem}
+</style></head><body>
+<h1>Layered Skill Coverage &mdash; Pilot Report</h1>
+<div class="note"><b>Scope note:</b> trajectories are hand-constructed to exercise every pipeline path
+with known ground truth (no live multi-model agent was run in this environment). Treat this as a
+pipeline-validation pilot, not an empirical study of real agent behavior.</div>
+<h2>Funnel metrics</h2><table><tr><th>Metric</th><th>Value</th></tr><tr><td>TaskSuiteCoverage</td><td>100.0%</td></tr><tr><td>RetrievalRate</td><td>100.0%</td></tr><tr><td>ComplianceCoverage</td><td>85.7%</td></tr><tr><td>VerifiableCoverage</td><td>83.3%</td></tr><tr><td>Verifiable_n</td><td>6</td></tr><tr><td>JudgedCoverage</td><td>100.0%</td></tr><tr><td>Judged_n</td><td>1</td></tr></table><h2>Cross-skill conflicts detected</h2><table><tr><th>Unit A</th><th>Unit B</th></tr><tr><td>Always use tabs for indentation when writing code.</td><td>Always use spaces for indentation when writing code.</td></tr></table><table><tr><th>Metric</th><th>Value</th></tr><tr><td>ConflictPairsDetected</td><td>1</td></tr><tr><td>ConflictInstantiatedRate</td><td>100.0%</td></tr><tr><td>ConflictResolutionRate</td><td>50.0%</td></tr><tr><td>ConflictResolutionInstances</td><td>2</td></tr></table><h2>Mutation adequacy</h2><table><tr><th>Metric</th><th>Value</th></tr><tr><td>MutationTrials</td><td>2</td></tr><tr><td>MutationScore</td><td>50.0%</td></tr></table><h2>Skills (verbatim, gutter-highlighted by aggregate status)</h2><p><span style="background:#e6f4ea;border-bottom:2px solid #1a7f37;padding:2px 6px;margin-right:8px">Pass</span><span style="background:#fdecec;border-bottom:2px solid #c53030;padding:2px 6px;margin-right:8px">Fail</span><span style="background:#eeeeee;border-bottom:2px solid #a3a3a3;padding:2px 6px;margin-right:8px">Unretrieved</span><span style="background:#f5f5f5;border-bottom:2px solid #e2e2e2;padding:2px 6px;margin-right:8px">Untested</span></p><h3>text-styling</h3><pre># Text Styling
+
+<span title="text-styling#u0#b0: Pass" style="background:#e6f4ea;border-bottom:2px solid #1a7f37;">If the color of the text is blue then change the font to 20px</span> and <span title="text-styling#u0#b1: Pass" style="background:#e6f4ea;border-bottom:2px solid #1a7f37;">if color is red then change it to 30 px.</span>
+</pre><h3>indent-tabs</h3><pre># Indentation (Tabs)
+
+<span title="indent-tabs#u0#b0: Pass" style="background:#e6f4ea;border-bottom:2px solid #1a7f37;">Always use tabs for indentation when writing code.</span>
+
+<span title="indent-tabs#u1#b0: Pass" style="background:#e6f4ea;border-bottom:2px solid #1a7f37;">End every file with a trailing newline character.</span>
+</pre><h3>indent-spaces</h3><pre># Indentation (Spaces)
+
+<span title="indent-spaces#u0#b0: Fail" style="background:#fdecec;border-bottom:2px solid #c53030;">Always use spaces for indentation when writing code.</span>
+</pre><h3>commit-messages</h3><pre># Commit Messages
+
+<span title="commit-messages#u0#b0: Pass" style="background:#e6f4ea;border-bottom:2px solid #1a7f37;">Write the commit message summary in the imperative mood.</span>
+
+<span title="commit-messages#u1#b0: Pass" style="background:#e6f4ea;border-bottom:2px solid #1a7f37;">Keep the summary line under 50 characters.</span>
+</pre><h2>Per-task detail (the aggregate rollup above can mask this)</h2><table><tr><th>Task</th><th>Key</th><th>Verdict</th></tr><tr><td>t_blue</td><td>text-styling#u0#b0</td><td>Pass</td></tr><tr><td>t_red</td><td>text-styling#u0#b1</td><td>Pass</td></tr><tr><td>t_red_unretrieved</td><td>text-styling#u0#b1</td><td>Unretrieved</td></tr><tr><td>t_code_consistent</td><td>indent-tabs#u0#b0</td><td>Pass</td></tr><tr><td>t_code_consistent</td><td>indent-tabs#u1#b0</td><td>Pass</td></tr><tr><td>t_code_consistent</td><td>indent-spaces#u0#b0</td><td>Fail</td></tr><tr><td>t_code_mixed</td><td>indent-tabs#u0#b0</td><td>Fail</td></tr><tr><td>t_code_mixed</td><td>indent-tabs#u1#b0</td><td>Pass</td></tr><tr><td>t_code_mixed</td><td>indent-spaces#u0#b0</td><td>Fail</td></tr><tr><td>t_commit_good</td><td>commit-messages#u0#b0</td><td>Pass</td></tr><tr><td>t_commit_good</td><td>commit-messages#u1#b0</td><td>Pass</td></tr><tr><td>t_commit_bad</td><td>commit-messages#u0#b0</td><td>Fail</td></tr><tr><td>t_commit_bad</td><td>commit-messages#u1#b0</td><td>Fail</td></tr></table></body></html>

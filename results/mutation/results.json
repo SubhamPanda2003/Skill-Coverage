@@ -1,0 +1,91 @@
+{
+  "source": "live-subagent-mutation-trials",
+  "trials": [
+    {
+      "key": "docstring-style#u2#b0",
+      "task_id": "t_combo_err_doc",
+      "original_verdict": "Pass",
+      "mutant_verdict": "Pass",
+      "killed": false
+    },
+    {
+      "key": "docstring-style#u2#b0",
+      "task_id": "t_docstring_good",
+      "original_verdict": "Pass",
+      "mutant_verdict": "Pass",
+      "killed": false
+    },
+    {
+      "key": "docstring-style#u2#b1",
+      "task_id": "t_combo_err_doc",
+      "original_verdict": "Pass",
+      "mutant_verdict": "Pass",
+      "killed": false
+    },
+    {
+      "key": "docstring-style#u2#b1",
+      "task_id": "t_docstring_good",
+      "original_verdict": "Pass",
+      "mutant_verdict": "Pass",
+      "killed": false
+    },
+    {
+      "key": "docstring-style#u3#b0",
+      "task_id": "t_docstring_good",
+      "original_verdict": "Pass",
+      "mutant_verdict": "Pass",
+      "killed": false
+    },
+    {
+      "key": "error-handling#u0#b0",
+      "task_id": "t_combo_err_doc",
+      "original_verdict": "Pass",
+      "mutant_verdict": "Pass",
+      "killed": false
+    },
+    {
+      "key": "error-handling#u0#b0",
+      "task_id": "t_errhandle_bad",
+      "original_verdict": "Pass",
+      "mutant_verdict": "Pass",
+      "killed": false
+    },
+    {
+      "key": "error-handling#u0#b0",
+      "task_id": "t_errhandle_good",
+      "original_verdict": "Pass",
+      "mutant_verdict": "Pass",
+      "killed": false
+    },
+    {
+      "key": "error-handling#u1#b0",
+      "task_id": "t_combo_err_doc",
+      "original_verdict": "Pass",
+      "mutant_verdict": "Pass",
+      "killed": false
+    },
+    {
+      "key": "error-handling#u1#b0",
+      "task_id": "t_errhandle_good",
+      "original_verdict": "Pass",
+      "mutant_verdict": "Pass",
+      "killed": false
+    },
+    {
+      "key": "indent-spaces#u0#b0",
+      "task_id": "t_code_consistent",
+      "original_verdict": "Pass",
+      "mutant_verdict": "Pass",
+      "killed": false
+    },
+    {
+      "key": "indent-spaces#u0#b0",
+      "task_id": "t_code_mixed",
+      "original_verdict": "Pass",
+      "mutant_verdict": "Fail",
+      "killed": true
+    }
+  ],
+  "MutationTrials": 12,
+  "MutationScore": 0.08333333333333333
+}

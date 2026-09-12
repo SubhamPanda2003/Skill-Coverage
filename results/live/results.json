@@ -1,0 +1,314 @@
+{
+  "source": "live-subagent-trajectories",
+  "per_key": {
+    "text-styling#u0#b0": {
+      "status": "Fail",
+      "verdicts": [
+        "Fail"
+      ],
+      "verified": true
+    },
+    "text-styling#u0#b1": {
+      "status": "Fail",
+      "verdicts": [
+        "Fail"
+      ],
+      "verified": true
+    },
+    "indent-tabs#u0#b0": {
+      "status": "Fail",
+      "verdicts": [
+        "Fail",
+        "Fail"
+      ],
+      "verified": true
+    },
+    "indent-tabs#u1#b0": {
+      "status": "Fail",
+      "verdicts": [
+        "Fail",
+        "Fail"
+      ],
+      "verified": true
+    },
+    "indent-spaces#u0#b0": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass",
+        "Pass"
+      ],
+      "verified": true
+    },
+    "commit-messages#u0#b0": {
+      "status": "Fail",
+      "verdicts": [
+        "Fail",
+        "Fail"
+      ],
+      "verified": false
+    },
+    "commit-messages#u1#b0": {
+      "status": "Fail",
+      "verdicts": [
+        "Fail",
+        "Fail"
+      ],
+      "verified": true
+    },
+    "error-handling#u0#b0": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass",
+        "Pass",
+        "Pass"
+      ],
+      "verified": true
+    },
+    "error-handling#u1#b0": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass",
+        "Pass"
+      ],
+      "verified": true
+    },
+    "error-handling#u2#b0": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass"
+      ],
+      "verified": false
+    },
+    "error-handling#u2#b1": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass"
+      ],
+      "verified": false
+    },
+    "error-handling#u3#b0": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass"
+      ],
+      "verified": false
+    },
+    "docstring-style#u0#b0": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass",
+        "Fail"
+      ],
+      "verified": false
+    },
+    "docstring-style#u1#b0": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass",
+        "Fail",
+        "Pass"
+      ],
+      "verified": false
+    },
+    "docstring-style#u2#b0": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass",
+        "Fail",
+        "Pass"
+      ],
+      "verified": true
+    },
+    "docstring-style#u2#b1": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass",
+        "Fail",
+        "Pass"
+      ],
+      "verified": true
+    },
+    "docstring-style#u3#b0": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass"
+      ],
+      "verified": true
+    }
+  },
+  "per_task": {
+    "t_blue": {
+      "text-styling#u0#b0": "Fail"
+    },
+    "t_red": {
+      "text-styling#u0#b1": "Fail"
+    },
+    "t_red_unretrieved": {
+      "text-styling#u0#b1": "Unretrieved"
+    },
+    "t_code_consistent": {
+      "indent-tabs#u0#b0": "Fail",
+      "indent-tabs#u1#b0": "Fail",
+      "indent-spaces#u0#b0": "Pass"
+    },
+    "t_code_mixed": {
+      "indent-tabs#u0#b0": "Fail",
+      "indent-tabs#u1#b0": "Fail",
+      "indent-spaces#u0#b0": "Pass"
+    },
+    "t_commit_good": {
+      "commit-messages#u0#b0": "Fail",
+      "commit-messages#u1#b0": "Fail"
+    },
+    "t_commit_bad": {
+      "commit-messages#u0#b0": "Fail",
+      "commit-messages#u1#b0": "Fail"
+    },
+    "t_errhandle_good": {
+      "error-handling#u0#b0": "Pass",
+      "error-handling#u1#b0": "Pass",
+      "error-handling#u2#b0": "Pass",
+      "error-handling#u2#b1": "Pass",
+      "error-handling#u3#b0": "Pass"
+    },
+    "t_errhandle_bad": {
+      "error-handling#u0#b0": "Pass"
+    },
+    "t_docstring_good": {
+      "docstring-style#u0#b0": "Pass",
+      "docstring-style#u1#b0": "Pass",
+      "docstring-style#u2#b0": "Pass",
+      "docstring-style#u2#b1": "Pass",
+      "docstring-style#u3#b0": "Pass"
+    },
+    "t_docstring_bad": {
+      "docstring-style#u0#b0": "Fail",
+      "docstring-style#u1#b0": "Fail",
+      "docstring-style#u2#b0": "Fail",
+      "docstring-style#u2#b1": "Fail"
+    },
+    "t_combo_err_doc": {
+      "error-handling#u0#b0": "Pass",
+      "error-handling#u1#b0": "Pass",
+      "docstring-style#u1#b0": "Pass",
+      "docstring-style#u2#b0": "Pass",
+      "docstring-style#u2#b1": "Pass"
+    }
+  },
+  "funnel_metrics": {
+    "TaskSuiteCoverage": 1.0,
+    "RetrievalRate": 1.0,
+    "ComplianceCoverage": 0.6470588235294118,
+    "VerifiableCoverage": 0.5454545454545454,
+    "Verifiable_n": 11,
+    "JudgedCoverage": 0.8333333333333334,
+    "Judged_n": 6
+  },
+  "conflict_pairs_detected": [
+    {
+      "a": [
+        "indent-tabs",
+        0,
+        0
+      ],
+      "b": [
+        "indent-spaces",
+        0,
+        0
+      ],
+      "a_text": "Always use tabs for indentation when writing code.",
+      "b_text": "Always use spaces for indentation when writing code."
+    },
+    {
+      "a": [
+        "indent-tabs",
+        1,
+        0
+      ],
+      "b": [
+        "docstring-style",
+        3,
+        0
+      ],
+      "a_text": "End every file with a trailing newline character.",
+      "b_text": "Wrap every docstring line at 79 characters or fewer."
+    },
+    {
+      "a": [
+        "commit-messages",
+        1,
+        0
+      ],
+      "b": [
+        "docstring-style",
+        3,
+        0
+      ],
+      "a_text": "Keep the summary line under 50 characters.",
+      "b_text": "Wrap every docstring line at 79 characters or fewer."
+    }
+  ],
+  "conflict_results": [
+    {
+      "pair": {
+        "a": [
+          "indent-tabs",
+          0,
+          0
+        ],
+        "b": [
+          "indent-spaces",
+          0,
+          0
+        ]
+      },
+      "instantiated_tasks": [
+        "t_code_consistent",
+        "t_code_mixed"
+      ],
+      "resolution_verdicts": [
+        "Pass",
+        "Pass"
+      ]
+    },
+    {
+      "pair": {
+        "a": [
+          "indent-tabs",
+          1,
+          0
+        ],
+        "b": [
+          "docstring-style",
+          3,
+          0
+        ]
+      },
+      "instantiated_tasks": [],
+      "resolution_verdicts": []
+    },
+    {
+      "pair": {
+        "a": [
+          "commit-messages",
+          1,
+          0
+        ],
+        "b": [
+          "docstring-style",
+          3,
+          0
+        ]
+      },
+      "instantiated_tasks": [],
+      "resolution_verdicts": []
+    }
+  ],
+  "conflict_metrics": {
+    "ConflictPairsDetected": 3,
+    "ConflictInstantiatedRate": 0.3333333333333333,
+    "ConflictResolutionRate": 1.0,
+    "ConflictResolutionInstances": 2
+  },
+  "note": "No mutation-adequacy pass included yet -- that needs a second round of subagent runs against mutated skill files, not yet wired into these commands."
+}

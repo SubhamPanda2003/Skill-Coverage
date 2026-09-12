@@ -1,0 +1,1 @@
+{"artifact": "# divide.py\ndef divide(a, b):\n    # Return the quotient of a and b, raising on division errors\n    try:\n        return a / b\n    except ZeroDivisionError as err:\n        raise ValueError(\"division by zero is not allowed\") from err", "judged_verdicts": {"docstring-style#u0#b0": "Fail", "docstring-style#u1#b0": "Fail"}}

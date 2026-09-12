@@ -1,0 +1,1 @@
+{"artifact": "I'll look for the project files to find the page heading element.\n\n---\n\n**Tool Call: List directory**\nStatus: Completed\n\n```json\n{\n  \"folders\": [\n    \"D:\\\\RandomExperiments\\\\Skill-Coverage\"\n  ]\n}\n```"}
