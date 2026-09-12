@@ -102,21 +102,47 @@ Neither of these is specific to synthetic vs. live data — both would have sile
 
 ### Honest findings
 
-**Three worker trajectories are degenerate, not genuinely non-compliant.** `t_blue`, `t_red`, and `t_red_unretrieved` (all `text-styling` tasks) show the same broken pattern: the subagent described a bash tool call in its final response text but never actually invoked it (`tool_uses: 0`), and never touched a heading element. `text-styling`'s resulting 0% compliance in this run is an artifact of that failure mode, not evidence the skill was disregarded. This was flagged, not root-caused — see Limitations.
+**Three worker trajectories are degenerate, not genuinely non-compliant.** `t_blue`, `t_red`, and `t_red_unretrieved` (all `text-styling` tasks) show the same broken pattern: the subagent described a bash tool call in its final response text but never actually invoked it (`tool_uses: 0`), and never touched a heading element. `text-styling`'s resulting 0% compliance in this run is an artifact of that failure mode, not evidence the skill was disregarded.
 
 **`commit-messages` also shows 0% compliance, for a different and legitimate reason.** Both commit-message tasks ran in an isolated environment with no git repo or diff to summarize; the worker correctly asked for context rather than fabricating a commit message. Reasonable agent behavior, zero artifact produced, so it fails by construction — a task/environment mismatch, not a skill failure.
 
-**Mutation-adequacy mostly isn't testing what it looks like it's testing yet.** 11 of 12 live trials came back `killed: false` — not because `error-handling` and `docstring-style` are decorative, but because their task prompts already restate the exact requirement in plain English ("raise ... with the original exception chained using `from`", "documenting its parameter, return value, and the exception it can raise"). Deleting the matching skill instruction changes nothing because the task text alone is sufficient to produce compliant output. The one trial that *was* killed — `indent-spaces#u0#b0` on `t_code_mixed` — is the one task generic enough ("format the code with proper indentation") to give the skill instruction something to add: with it deleted, the agent switched to tabs. This is the pilot's "trailing newline" decorative-instruction finding playing out at the scale of an entire task suite rather than one isolated unit, and it means most of today's `MutationScore` denominator isn't a meaningful adequacy test yet.
+**Mutation-adequacy's low score survived a direct test of the "leading task text" hypothesis — which means the explanation is different from what it looked like.** The original hypothesis: 11 of 12 live trials came back `killed: false` because the task prompts restated the exact requirement in plain English. That hypothesis made a testable prediction — rewrite the prompts to state only the goal, and the score should rise. It didn't. See the follow-up experiment below.
 
 ### Limitations of this run specifically
 
 - N=1 run, one model, no repeated trials — same caveat the pilot gave for its synthetic data, now attached to real output instead.
-- The three degenerate `text-styling` trajectories were not rerun or root-caused; whether this is one-off sampling noise or a systematic issue with that task shape is unknown.
-- Judged-tier verdicts came from real `lsc-judge` subagent calls this time (progress on the pilot's Next Steps #1), but each is a single, unreplicated judgment — no human-labeled κ-agreement check has been run against them yet.
-- `error-handling` and `docstring-style` task prompts are too prescriptive for mutation-adequacy to say anything meaningful about those two skills yet (see above) — they need less-leading phrasing before a second mutation run would be informative.
+- No human-labeled κ-agreement check has been run against the `lsc-judge` verdicts yet — see Part 3 below for the check itself, once labels come back.
 
 ### Next steps
 
-1. Rewrite the `error-handling`/`docstring-style` task prompts to state the goal without restating the skill's specific mechanism, so mutation-adequacy can actually distinguish load-bearing from decorative instructions for those two skills.
-2. Rerun `t_blue`/`t_red`/`t_red_unretrieved` to check whether the degenerate tool-call-as-text pattern reproduces, and if so, root-cause whether it's a task-shape issue or a subagent-harness issue.
-3. Run the κ-agreement check called for in the pilot's Next Steps #1, now that real `lsc-judge` verdicts exist to sample against human labels.
+1. ~~Rewrite the `error-handling`/`docstring-style` task prompts~~ and ~~rerun `t_blue`/`t_red`/`t_red_unretrieved`~~ — **done, same day, see Part 3.**
+2. Run the κ-agreement check — **in progress, see Part 3.**
+3. Given Part 3's finding that `error-handling`/`docstring-style` instructions align with the model's pretrained defaults rather than needing the skill at all: find or write task/skill pairs where the skill instruction cuts *against* a plausible default (like `indent-spaces` does), to get a mutation-adequacy signal that isn't structurally pre-determined by what the base model already tends to do.
+
+---
+
+## Part 3: Follow-up Experiments, Same Day
+
+*Three of Part 2's own Next Steps, run the same day as a direct test of Part 2's hypotheses rather than left as future work. Trajectories: same `results/trajectories/` and `results/mutants/` (files overwritten in place for the 9 affected tasks/candidates), rescored via the same `/lsc-score` and `/lsc-mutate` pipeline.*
+
+### De-leading the task prompts didn't move the mutation score — a real, useful negative result
+
+Part 2 hypothesized that 11 of 12 mutation trials came back `killed: false` because the task prompts restated the skill's exact mechanism ("raise ... with the original exception chained using `from`", "documenting its parameter, return value, and the exception it can raise"). That's a falsifiable claim: rewrite the prompts to state only the goal, rerun, and the score should rise if the hypothesis is right.
+
+`t_errhandle_good`, `t_docstring_good`, and `t_combo_err_doc` were rewritten to name only the goal (e.g., "handling the case where a file is missing and the case where a file's content isn't valid JSON" instead of spelling out log-and-skip / raise-and-chain), verified to still retrieve the right skills via `lsc/core.py`'s `discover()`, then rerun through fresh `lsc-worker` subagents and rejudged. Compliance was unaffected — `ComplianceCoverage` held at 64.7% — and every mutation trial on the de-leaded prompts still came back `killed: false`. **`MutationScore` is unchanged: 8.3% (1/12).**
+
+That's the hypothesis failing its own test, and the failure is informative: if the task text were doing the work, removing it should have exposed at least some decorative instructions as genuinely unenforced. It didn't move at all. The likelier explanation: `error-handling`'s bare-except ban, its exception-chaining rule, and `docstring-style`'s Google-style Args/Returns/Raises convention are all things this model already does by default from pretraining, task text or skill or not — chaining with `from` and writing Google-style docstrings are extremely common patterns in Python code the model has seen, not niche conventions this skill introduces. `indent-spaces#u0#b0` is the one instruction that *was* killed, and it's the one case where the alternative (tabs) is roughly as plausible a default as the instructed behavior (spaces) — the skill has something to add specifically because the model has no strong prior either way. **The real predictor of mutation-adequacy here looks like "does this instruction fight a default the model already has," not "is this instruction restated in the task text."** That reframes Next Steps item 3 above: future mutation-testing tasks should target instructions that plausibly cut against a pretrained default, not just avoid restating the mechanism in the prompt.
+
+### The degenerate `text-styling` pattern is real but not deterministic
+
+Rerunning `t_blue`, `t_red`, and `t_red_unretrieved` with identical prompts: `t_blue` and `t_red` reproduced the exact same failure (a described-but-never-executed tool call, `tool_uses: 0`) on the second attempt. `t_red_unretrieved` did not — it produced a fully compliant artifact (`color: red; font-size: 30px`) this time. Recurring at roughly 2-in-3 across two independent samples per task is enough to call this a real, non-negligible failure mode of this task shape (an empty working directory with no actual heading element to find) rather than a one-off fluke, but it's not deterministic either — same prompt, different outcome, on the same task twice.
+
+This also sharpens the pilot's original retrieval-masking finding. `t_red_unretrieved`'s task text ("Ship the heading in red now.") still doesn't lexically overlap `text-styling`'s keywords, so `lsc/core.py`'s `discover()` heuristic still marks it `Unretrieved` in `per_task` — but the real subagent produced fully compliant output anyway. The deterministic lexical retrieval check and the real subagent's actual behavior now visibly disagree on this exact task, in both directions across the two pilots: the methodology's own retrieval predictor is a heuristic proxy, not a ground truth reading of what the live model actually did.
+
+### κ-agreement check: pending
+
+A 10-item human-labeling sample was prepared from every `Judged`-tier verdict produced by real `lsc-judge` calls so far (5 tasks, 10 (task, key) pairs) — see the request accompanying this update. Agreement will be computed and reported here once labels come back.
+
+### Housekeeping
+
+All of this session's work — the pipeline, the pilot, the live run, both bug fixes, and this follow-up — is now committed to git (previously everything past the initial `LICENSE`/`README.md` commit was untracked). `text_analyzer.py`'s relevance to this project is still unresolved but no longer at risk of being lost either way.
