@@ -1,0 +1,16 @@
+{
+  "assertion_results": [
+    {
+      "text": "Never prefix boolean variable or parameter names with is, has, or should.",
+      "lsc_key": "boolean-naming#u0#b0",
+      "passed": true,
+      "evidence": "No is_/has_/should_ prefixed identifier found"
+    }
+  ],
+  "summary": {
+    "passed": 1,
+    "failed": 0,
+    "total": 1,
+    "pass_rate": 1.0
+  }
+}

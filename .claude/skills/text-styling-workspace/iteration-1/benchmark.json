@@ -1,0 +1,48 @@
+{
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 1.0,
+        "stddev": 0.0
+      }
+    },
+    "without_skill": null,
+    "delta": null
+  },
+  "lsc_funnel_metrics": {
+    "TaskSuiteCoverage": 1.0,
+    "RetrievalRate": 1.0,
+    "ComplianceCoverage": 1.0,
+    "VerifiableCoverage": 1.0,
+    "Verifiable_n": 2,
+    "JudgedCoverage": null,
+    "Judged_n": 0
+  },
+  "lsc_per_key": {
+    "text-styling#u0#b0": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass"
+      ],
+      "verified": true
+    },
+    "text-styling#u0#b1": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass"
+      ],
+      "verified": true
+    }
+  },
+  "lsc_per_task": {
+    "t_blue": {
+      "text-styling#u0#b0": "Pass"
+    },
+    "t_red": {
+      "text-styling#u0#b1": "Pass"
+    },
+    "t_red_unretrieved": {
+      "text-styling#u0#b1": "Unretrieved"
+    }
+  }
+}

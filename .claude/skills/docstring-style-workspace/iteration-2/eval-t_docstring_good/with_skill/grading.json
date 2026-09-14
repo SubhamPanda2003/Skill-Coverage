@@ -1,0 +1,40 @@
+{
+  "assertion_results": [
+    {
+      "text": "Write docstrings in Google style, with `Args:`, `Returns:`, and `Raises:` sections where applicable.",
+      "lsc_key": "docstring-style#u0#b0",
+      "passed": true,
+      "evidence": "The docstring includes properly formatted Google-style `Args:`, `Returns:`, and `Raises:` sections describing the parameter, return value, and the ValueError condition."
+    },
+    {
+      "text": "Start every docstring with a single-line summary written in the imperative mood.",
+      "lsc_key": "docstring-style#u1#b0",
+      "passed": true,
+      "evidence": "The docstring's first line, \"Calculate the factorial of a non-negative integer.\", is a single-line summary phrased in the imperative mood, satisfying the instruction."
+    },
+    {
+      "text": "If the function takes parameters then document every parameter under `Args:`, and if the function can raise an exception then document it under `Raises:`.",
+      "lsc_key": "docstring-style#u2#b0",
+      "passed": true,
+      "evidence": "'Args:' found in artifact"
+    },
+    {
+      "text": "If the function takes parameters then document every parameter under `Args:`, and if the function can raise an exception then document it under `Raises:`.",
+      "lsc_key": "docstring-style#u2#b1",
+      "passed": true,
+      "evidence": "'Raises:' found in artifact"
+    },
+    {
+      "text": "Wrap every docstring line at 79 characters or fewer.",
+      "lsc_key": "docstring-style#u3#b0",
+      "passed": true,
+      "evidence": "Longest docstring line is 54 chars (limit 79), across 12 docstring lines"
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  }
+}

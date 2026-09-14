@@ -1,0 +1,24 @@
+{
+  "skill_name": "line-length-limit",
+  "evals": [
+    {
+      "id": "t_line_length_limit",
+      "prompt": "Write a Python function that validates an email address using a regular expression.",
+      "expected_output": "A function that validates an email address with a regex.",
+      "assertions": [
+        {
+          "text": "Wrap all code lines at 60 characters or fewer.",
+          "lsc_key": "line-length-limit#u0#b0"
+        }
+      ],
+      "lsc_targets": [
+        [
+          "line-length-limit",
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "note": "Design prediction for this session's 25-skill expansion: 'fight' -- does this instruction plausibly cut against a pretrained default (fight), align with one (align), or is it genuinely unclear (uncertain)? See docs/results.md Part 5."
+}

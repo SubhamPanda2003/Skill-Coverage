@@ -1,0 +1,16 @@
+{
+  "assertion_results": [
+    {
+      "text": "Every error message string must end with a period.",
+      "lsc_key": "error-period#u0#b0",
+      "passed": true,
+      "evidence": "Raised error message ends with a period"
+    }
+  ],
+  "summary": {
+    "passed": 1,
+    "failed": 0,
+    "total": 1,
+    "pass_rate": 1.0
+  }
+}

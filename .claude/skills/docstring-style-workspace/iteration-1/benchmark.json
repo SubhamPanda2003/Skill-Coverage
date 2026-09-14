@@ -1,0 +1,85 @@
+{
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 0.6666666666666666,
+        "stddev": 0.4714045207910317
+      }
+    },
+    "without_skill": null,
+    "delta": null
+  },
+  "lsc_funnel_metrics": {
+    "TaskSuiteCoverage": 1.0,
+    "RetrievalRate": 1.0,
+    "ComplianceCoverage": 1.0,
+    "VerifiableCoverage": 1.0,
+    "Verifiable_n": 3,
+    "JudgedCoverage": 1.0,
+    "Judged_n": 2
+  },
+  "lsc_per_key": {
+    "docstring-style#u0#b0": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass",
+        "Fail"
+      ],
+      "verified": false
+    },
+    "docstring-style#u1#b0": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass",
+        "Fail",
+        "Pass"
+      ],
+      "verified": false
+    },
+    "docstring-style#u2#b0": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass",
+        "Fail",
+        "Pass"
+      ],
+      "verified": true
+    },
+    "docstring-style#u2#b1": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass",
+        "Fail",
+        "Pass"
+      ],
+      "verified": true
+    },
+    "docstring-style#u3#b0": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass"
+      ],
+      "verified": true
+    }
+  },
+  "lsc_per_task": {
+    "t_docstring_good": {
+      "docstring-style#u0#b0": "Pass",
+      "docstring-style#u1#b0": "Pass",
+      "docstring-style#u2#b0": "Pass",
+      "docstring-style#u2#b1": "Pass",
+      "docstring-style#u3#b0": "Pass"
+    },
+    "t_docstring_bad": {
+      "docstring-style#u0#b0": "Fail",
+      "docstring-style#u1#b0": "Fail",
+      "docstring-style#u2#b0": "Fail",
+      "docstring-style#u2#b1": "Fail"
+    },
+    "t_combo_err_doc": {
+      "docstring-style#u1#b0": "Pass",
+      "docstring-style#u2#b0": "Pass",
+      "docstring-style#u2#b1": "Pass"
+    }
+  }
+}

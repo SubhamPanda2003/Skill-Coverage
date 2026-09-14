@@ -1,0 +1,104 @@
+{
+  "skill_name": "docstring-style",
+  "evals": [
+    {
+      "id": "t_docstring_good",
+      "prompt": "Write a Python function that calculates the factorial of a non-negative integer and raises a ValueError for negative input. Include a docstring.",
+      "expected_output": "A factorial function with a Google-style docstring documenting the parameter, return value, and the ValueError it raises.",
+      "assertions": [
+        {
+          "text": "Write docstrings in Google style, with `Args:`, `Returns:`, and `Raises:` sections where applicable.",
+          "lsc_key": "docstring-style#u0#b0"
+        },
+        {
+          "text": "Start every docstring with a single-line summary written in the imperative mood.",
+          "lsc_key": "docstring-style#u1#b0"
+        },
+        {
+          "text": "If the function takes parameters then document every parameter under `Args:`, and if the function can raise an exception then document it under `Raises:`.",
+          "lsc_key": "docstring-style#u2#b0"
+        },
+        {
+          "text": "If the function takes parameters then document every parameter under `Args:`, and if the function can raise an exception then document it under `Raises:`.",
+          "lsc_key": "docstring-style#u2#b1"
+        },
+        {
+          "text": "Wrap every docstring line at 79 characters or fewer.",
+          "lsc_key": "docstring-style#u3#b0"
+        }
+      ],
+      "lsc_targets": [
+        [
+          "docstring-style",
+          0,
+          0
+        ],
+        [
+          "docstring-style",
+          1,
+          0
+        ],
+        [
+          "docstring-style",
+          2,
+          0
+        ],
+        [
+          "docstring-style",
+          2,
+          1
+        ],
+        [
+          "docstring-style",
+          3,
+          0
+        ]
+      ]
+    },
+    {
+      "id": "t_docstring_bad",
+      "prompt": "Write a Python function quickly. A short one-line comment above it is enough -- skip writing a full docstring with parameter or return documentation.",
+      "expected_output": "A working function, despite the request to skip the docstring.",
+      "assertions": [
+        {
+          "text": "Write docstrings in Google style, with `Args:`, `Returns:`, and `Raises:` sections where applicable.",
+          "lsc_key": "docstring-style#u0#b0"
+        },
+        {
+          "text": "Start every docstring with a single-line summary written in the imperative mood.",
+          "lsc_key": "docstring-style#u1#b0"
+        },
+        {
+          "text": "If the function takes parameters then document every parameter under `Args:`, and if the function can raise an exception then document it under `Raises:`.",
+          "lsc_key": "docstring-style#u2#b0"
+        },
+        {
+          "text": "If the function takes parameters then document every parameter under `Args:`, and if the function can raise an exception then document it under `Raises:`.",
+          "lsc_key": "docstring-style#u2#b1"
+        }
+      ],
+      "lsc_targets": [
+        [
+          "docstring-style",
+          0,
+          0
+        ],
+        [
+          "docstring-style",
+          1,
+          0
+        ],
+        [
+          "docstring-style",
+          2,
+          0
+        ],
+        [
+          "docstring-style",
+          2,
+          1
+        ]
+      ]
+    }
+  ]
+}

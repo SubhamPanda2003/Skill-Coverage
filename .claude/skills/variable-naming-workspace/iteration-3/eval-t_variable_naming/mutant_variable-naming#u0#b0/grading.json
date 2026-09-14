@@ -1,0 +1,16 @@
+{
+  "assertion_results": [
+    {
+      "text": "Always name variables in camelCase, never snake_case.",
+      "lsc_key": "variable-naming#u0#b0",
+      "passed": true,
+      "evidence": "camelCase assignment found: True, snake_case assignment found: False"
+    }
+  ],
+  "summary": {
+    "passed": 1,
+    "failed": 0,
+    "total": 1,
+    "pass_rate": 1.0
+  }
+}

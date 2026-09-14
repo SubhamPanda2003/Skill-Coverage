@@ -1,0 +1,6 @@
+```css
+h1 {
+	color: blue;
+	font-size: 20px;
+}
+```

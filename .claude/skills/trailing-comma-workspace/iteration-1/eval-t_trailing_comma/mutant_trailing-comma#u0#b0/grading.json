@@ -1,0 +1,16 @@
+{
+  "assertion_results": [
+    {
+      "text": "Always include a trailing comma after the last element in a multi-line Python list, tuple, or dict.",
+      "lsc_key": "trailing-comma#u0#b0",
+      "passed": true,
+      "evidence": "Found trailing comma before a closing bracket on the next line"
+    }
+  ],
+  "summary": {
+    "passed": 1,
+    "failed": 0,
+    "total": 1,
+    "pass_rate": 1.0
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "skill_name": "variable-naming",
+  "evals": [
+    {
+      "id": "t_variable_naming",
+      "prompt": "Write a Python function that calculates the total price of items in a shopping cart, including tax.",
+      "expected_output": "A function computing a cart total including tax.",
+      "assertions": [
+        {
+          "text": "Always name variables in camelCase, never snake_case.",
+          "lsc_key": "variable-naming#u0#b0"
+        },
+        {
+          "text": "And always start with panda...",
+          "lsc_key": "variable-naming#u1#b0"
+        }
+      ],
+      "lsc_targets": [
+        [
+          "variable-naming",
+          0,
+          0
+        ],
+        [
+          "variable-naming",
+          1,
+          0
+        ]
+      ]
+    }
+  ],
+  "note": "Design prediction for this session's 25-skill expansion: 'fight' -- does this instruction plausibly cut against a pretrained default (fight), align with one (align), or is it genuinely unclear (uncertain)? See docs/results.md Part 5. Unit 1 added afterward as a deliberately arbitrary instruction (no grounding in any real convention) -- a positive control for mutation-adequacy itself, see Part 6."
+}

@@ -1,0 +1,5 @@
+{
+  "total_tokens": null,
+  "duration_ms": null,
+  "note": "Not captured for this backfilled iteration -- timing.json population starts with the first live run under the updated /lsc-run-benchmark and /lsc-mutate commands, not retrofitted here to avoid presenting imprecisely-recalled numbers as recorded fact."
+}

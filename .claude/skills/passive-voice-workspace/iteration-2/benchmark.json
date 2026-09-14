@@ -1,0 +1,35 @@
+{
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 0.0,
+        "stddev": 0.0
+      }
+    },
+    "without_skill": null,
+    "delta": null
+  },
+  "lsc_funnel_metrics": {
+    "TaskSuiteCoverage": 1.0,
+    "RetrievalRate": 1.0,
+    "ComplianceCoverage": 0.0,
+    "VerifiableCoverage": null,
+    "Verifiable_n": 0,
+    "JudgedCoverage": 0.0,
+    "Judged_n": 1
+  },
+  "lsc_per_key": {
+    "passive-voice#u0#b0": {
+      "status": "Fail",
+      "verdicts": [
+        "Fail"
+      ],
+      "verified": false
+    }
+  },
+  "lsc_per_task": {
+    "t_passive_voice": {
+      "passive-voice#u0#b0": "Fail"
+    }
+  }
+}

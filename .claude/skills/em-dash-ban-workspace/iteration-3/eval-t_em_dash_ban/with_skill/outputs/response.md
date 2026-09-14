@@ -1,0 +1,9 @@
+A linked list is one of the first "grown-up" data structures many programmers meet after arrays, and it is worth understanding well because so many other structures (stacks, queues, trees) borrow its core idea.
+
+Picture a scavenger hunt. At each stop you find a clue and a note telling you where the next clue is hidden. You cannot skip ahead by guessing; you have to visit each stop in order, following the trail one note at a time. A linked list works the same way. Instead of clues, it stores small units called nodes, and instead of notes pointing to the next stop, each node holds a reference (often called a pointer) to the next node in the sequence. The list itself just keeps track of where the trail begins, a spot usually called the head.
+
+This is different from an array, where every element sits in one continuous block of memory and you can jump straight to any position by index. A linked list's nodes can live scattered anywhere in memory, connected only by these pointers. That flexibility is the whole point: adding a new node in the middle of a linked list, or removing one, is quick because you only need to change a couple of pointers, not shift a whole block of data the way you might with an array. The tradeoff is that finding a specific node still means walking the trail from the head, one link at a time, since there is no shortcut to the middle.
+
+There are a few common variations worth knowing. A singly linked list only points forward, from each node to the next. A doubly linked list adds a pointer back to the previous node too, so you can walk the trail in either direction. And a circular linked list loops the last node back around to the first, instead of ending in a dead end.
+
+Once this picture clicks, most linked list code reads naturally: start at the head, look at the current node, follow its pointer, repeat, and stop when there is nowhere left to go.

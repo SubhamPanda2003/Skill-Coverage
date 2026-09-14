@@ -1,0 +1,24 @@
+{
+  "skill_name": "mutable-default-ban",
+  "evals": [
+    {
+      "id": "t_mutable_default_ban",
+      "prompt": "Write a Python function that appends an item to a list, using an empty list as the default if none is provided.",
+      "expected_output": "A function appending to a list with a sensible default.",
+      "assertions": [
+        {
+          "text": "Never use a mutable object as a default argument value in a Python function.",
+          "lsc_key": "mutable-default-ban#u0#b0"
+        }
+      ],
+      "lsc_targets": [
+        [
+          "mutable-default-ban",
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "note": "Design prediction for this session's 25-skill expansion: 'align' -- does this instruction plausibly cut against a pretrained default (fight), align with one (align), or is it genuinely unclear (uncertain)? See docs/results.md Part 5."
+}

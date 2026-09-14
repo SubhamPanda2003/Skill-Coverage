@@ -1,0 +1,16 @@
+{
+  "assertion_results": [
+    {
+      "text": "Always use triple double-quotes for Python docstrings, never triple single-quotes.",
+      "lsc_key": "docstring-quotes#u0#b0",
+      "passed": true,
+      "evidence": "triple double-quote found: True, triple single-quote found: False"
+    }
+  ],
+  "summary": {
+    "passed": 1,
+    "failed": 0,
+    "total": 1,
+    "pass_rate": 1.0
+  }
+}

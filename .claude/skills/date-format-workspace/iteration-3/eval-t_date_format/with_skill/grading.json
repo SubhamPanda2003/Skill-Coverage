@@ -1,0 +1,16 @@
+{
+  "assertion_results": [
+    {
+      "text": "Always write dates in DD/MM/YYYY format.",
+      "lsc_key": "date-format#u0#b0",
+      "passed": false,
+      "evidence": "No DD/MM/YYYY-shaped date found"
+    }
+  ],
+  "summary": {
+    "passed": 0,
+    "failed": 1,
+    "total": 1,
+    "pass_rate": 0.0
+  }
+}

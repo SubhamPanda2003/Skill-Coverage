@@ -1,0 +1,24 @@
+{
+  "skill_name": "semicolon-ban",
+  "evals": [
+    {
+      "id": "t_semicolon_ban",
+      "prompt": "Write a short Python script with three separate print statements.",
+      "expected_output": "A short script with three print statements.",
+      "assertions": [
+        {
+          "text": "Never end a Python statement with a semicolon.",
+          "lsc_key": "semicolon-ban#u0#b0"
+        }
+      ],
+      "lsc_targets": [
+        [
+          "semicolon-ban",
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "note": "Design prediction for this session's 25-skill expansion: 'align' -- does this instruction plausibly cut against a pretrained default (fight), align with one (align), or is it genuinely unclear (uncertain)? See docs/results.md Part 5."
+}

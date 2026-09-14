@@ -1,0 +1,24 @@
+{
+  "skill_name": "test-naming",
+  "evals": [
+    {
+      "id": "t_test_naming",
+      "prompt": "Write a pytest test function that checks a function returns None when given an empty list.",
+      "expected_output": "A pytest test function for the empty-list case.",
+      "assertions": [
+        {
+          "text": "Name every test function starting with should_, never test_.",
+          "lsc_key": "test-naming#u0#b0"
+        }
+      ],
+      "lsc_targets": [
+        [
+          "test-naming",
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "note": "Design prediction for this session's 25-skill expansion: 'fight' -- does this instruction plausibly cut against a pretrained default (fight), align with one (align), or is it genuinely unclear (uncertain)? See docs/results.md Part 5."
+}

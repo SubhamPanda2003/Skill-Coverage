@@ -1,0 +1,24 @@
+{
+  "skill_name": "docstring-quotes",
+  "evals": [
+    {
+      "id": "t_docstring_quotes",
+      "prompt": "Write a Python function that reverses a string, with a docstring.",
+      "expected_output": "A string-reversing function with a docstring.",
+      "assertions": [
+        {
+          "text": "Always use triple double-quotes for Python docstrings, never triple single-quotes.",
+          "lsc_key": "docstring-quotes#u0#b0"
+        }
+      ],
+      "lsc_targets": [
+        [
+          "docstring-quotes",
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "note": "Design prediction for this session's 25-skill expansion: 'align' -- does this instruction plausibly cut against a pretrained default (fight), align with one (align), or is it genuinely unclear (uncertain)? See docs/results.md Part 5."
+}

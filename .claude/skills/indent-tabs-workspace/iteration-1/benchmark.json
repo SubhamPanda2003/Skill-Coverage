@@ -1,0 +1,49 @@
+{
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 0.3333333333333333,
+        "stddev": 0.0
+      }
+    },
+    "without_skill": null,
+    "delta": null
+  },
+  "lsc_funnel_metrics": {
+    "TaskSuiteCoverage": 1.0,
+    "RetrievalRate": 1.0,
+    "ComplianceCoverage": 0.0,
+    "VerifiableCoverage": 0.0,
+    "Verifiable_n": 2,
+    "JudgedCoverage": null,
+    "Judged_n": 0
+  },
+  "lsc_per_key": {
+    "indent-tabs#u0#b0": {
+      "status": "Fail",
+      "verdicts": [
+        "Fail",
+        "Fail"
+      ],
+      "verified": true
+    },
+    "indent-tabs#u1#b0": {
+      "status": "Fail",
+      "verdicts": [
+        "Fail",
+        "Fail"
+      ],
+      "verified": true
+    }
+  },
+  "lsc_per_task": {
+    "t_code_consistent": {
+      "indent-tabs#u0#b0": "Fail",
+      "indent-tabs#u1#b0": "Fail"
+    },
+    "t_code_mixed": {
+      "indent-tabs#u0#b0": "Fail",
+      "indent-tabs#u1#b0": "Fail"
+    }
+  }
+}

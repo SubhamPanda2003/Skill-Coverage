@@ -1,0 +1,40 @@
+{
+  "assertion_results": [
+    {
+      "text": "Catch specific exception types instead of using a bare `except:` clause.",
+      "lsc_key": "error-handling#u0#b0",
+      "passed": true,
+      "evidence": "No bare 'except:' clause found"
+    },
+    {
+      "text": "Always chain the original exception using `raise NewError(msg) from err` when re-raising inside an except block.",
+      "lsc_key": "error-handling#u1#b0",
+      "passed": true,
+      "evidence": "Found chained raise: 'raise InvalidInputError(\\n            f\"Cannot convert {value!r} to an integer\"\\n        ) from err'"
+    },
+    {
+      "text": "Start every docstring with a single-line summary written in the imperative mood.",
+      "lsc_key": "docstring-style#u1#b0",
+      "passed": true,
+      "evidence": "Both docstrings open with a single-line imperative-mood summary \u2014 `\"\"\"Raise when a value cannot be converted to an integer.\"\"\"` and `\"\"\"Convert a string to an integer safely.\"\"\"` \u2014 before any further detail (Args/Returns/Raises) in the function's docstring."
+    },
+    {
+      "text": "If the function takes parameters then document every parameter under `Args:`, and if the function can raise an exception then document it under `Raises:`.",
+      "lsc_key": "docstring-style#u2#b0",
+      "passed": true,
+      "evidence": "'Args:' found in artifact"
+    },
+    {
+      "text": "If the function takes parameters then document every parameter under `Args:`, and if the function can raise an exception then document it under `Raises:`.",
+      "lsc_key": "docstring-style#u2#b1",
+      "passed": true,
+      "evidence": "'Raises:' found in artifact"
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  }
+}

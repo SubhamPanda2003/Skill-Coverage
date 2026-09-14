@@ -1,0 +1,16 @@
+{
+  "assertion_results": [
+    {
+      "text": "Write all instructions in the passive voice, never the imperative.",
+      "lsc_key": "passive-voice#u0#b0",
+      "passed": false,
+      "evidence": "All three instructions use the imperative mood (e.g., \"Install the package from PyPI using `pip install package-name`.\", \"Verify the installation by running...\") rather than passive voice as required."
+    }
+  ],
+  "summary": {
+    "passed": 0,
+    "failed": 1,
+    "total": 1,
+    "pass_rate": 0.0
+  }
+}

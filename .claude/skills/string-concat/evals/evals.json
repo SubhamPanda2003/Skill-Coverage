@@ -1,0 +1,33 @@
+{
+  "skill_name": "string-concat",
+  "evals": [
+    {
+      "id": "t_string_concat",
+      "prompt": "Write a Python function that builds a full name string from a first and last name.",
+      "expected_output": "A function combining a first and last name into one string.",
+      "assertions": [
+        {
+          "text": "Always build strings using the + operator, never f-strings.",
+          "lsc_key": "string-concat#u0#b0"
+        },
+        {
+          "text": "Also if there is vowels in the statement replace it with x",
+          "lsc_key": "string-concat#u1#b0"
+        }
+      ],
+      "lsc_targets": [
+        [
+          "string-concat",
+          0,
+          0
+        ],
+        [
+          "string-concat",
+          1,
+          0
+        ]
+      ]
+    }
+  ],
+  "note": "Design prediction for this session's 25-skill expansion: 'fight' -- does this instruction plausibly cut against a pretrained default (fight), align with one (align), or is it genuinely unclear (uncertain)? See docs/results.md Part 5. Unit 1 added afterward as a deliberately arbitrary instruction (no grounding in any real convention) -- a positive control for mutation-adequacy itself, see Part 6."
+}

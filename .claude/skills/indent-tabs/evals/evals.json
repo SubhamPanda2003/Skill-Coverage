@@ -1,0 +1,5 @@
+{
+  "skill_name": "indent-tabs",
+  "evals": [],
+  "note": "This skill is only exercised via cross-skill evals today (see ../../../evals/cross-skill.json) -- it has no single-skill eval of its own yet."
+}

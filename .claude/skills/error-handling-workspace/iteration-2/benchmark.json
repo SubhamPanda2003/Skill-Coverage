@@ -1,0 +1,77 @@
+{
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 0.8666666666666667,
+        "stddev": 0.18856180831641267
+      }
+    },
+    "without_skill": null,
+    "delta": null
+  },
+  "lsc_funnel_metrics": {
+    "TaskSuiteCoverage": 1.0,
+    "RetrievalRate": 1.0,
+    "ComplianceCoverage": 0.6,
+    "VerifiableCoverage": 1.0,
+    "Verifiable_n": 2,
+    "JudgedCoverage": 0.3333333333333333,
+    "Judged_n": 3
+  },
+  "lsc_per_key": {
+    "error-handling#u0#b0": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass",
+        "Pass",
+        "Pass"
+      ],
+      "verified": true
+    },
+    "error-handling#u1#b0": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass",
+        "Pass"
+      ],
+      "verified": true
+    },
+    "error-handling#u2#b0": {
+      "status": "Fail",
+      "verdicts": [
+        "Fail"
+      ],
+      "verified": false
+    },
+    "error-handling#u2#b1": {
+      "status": "Fail",
+      "verdicts": [
+        "Fail"
+      ],
+      "verified": false
+    },
+    "error-handling#u3#b0": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass"
+      ],
+      "verified": false
+    }
+  },
+  "lsc_per_task": {
+    "t_errhandle_good": {
+      "error-handling#u0#b0": "Pass",
+      "error-handling#u1#b0": "Pass",
+      "error-handling#u2#b0": "Fail",
+      "error-handling#u2#b1": "Fail",
+      "error-handling#u3#b0": "Pass"
+    },
+    "t_errhandle_bad": {
+      "error-handling#u0#b0": "Pass"
+    },
+    "t_combo_err_doc": {
+      "error-handling#u0#b0": "Pass",
+      "error-handling#u1#b0": "Pass"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "assertion_results": [
+    {
+      "text": "Name every module-level constant in uppercase with underscores.",
+      "lsc_key": "constant-naming#u0#b0",
+      "passed": true,
+      "evidence": "Found uppercase constant assignment 'MAX_FILE_SIZE_BYTES ='"
+    }
+  ],
+  "summary": {
+    "passed": 1,
+    "failed": 0,
+    "total": 1,
+    "pass_rate": 1.0
+  }
+}

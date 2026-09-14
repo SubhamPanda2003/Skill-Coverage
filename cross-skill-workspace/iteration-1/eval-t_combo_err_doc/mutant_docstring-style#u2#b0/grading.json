@@ -1,0 +1,16 @@
+{
+  "assertion_results": [
+    {
+      "text": "If the function takes parameters then document every parameter under `Args:`, and if the function can raise an exception then document it under `Raises:`.",
+      "lsc_key": "docstring-style#u2#b0",
+      "passed": true,
+      "evidence": "'Args:' found in artifact"
+    }
+  ],
+  "summary": {
+    "passed": 1,
+    "failed": 0,
+    "total": 1,
+    "pass_rate": 1.0
+  }
+}

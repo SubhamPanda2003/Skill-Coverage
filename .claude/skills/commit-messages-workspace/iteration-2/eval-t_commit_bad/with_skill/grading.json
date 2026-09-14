@@ -1,0 +1,22 @@
+{
+  "assertion_results": [
+    {
+      "text": "Write the commit message summary in the imperative mood.",
+      "lsc_key": "commit-messages#u0#b0",
+      "passed": true,
+      "evidence": "The summary line \"Fix cache eviction off-by-one\" begins with the imperative verb \"Fix\" rather than a non-imperative form like \"Fixed\" or \"Fixes.\""
+    },
+    {
+      "text": "Keep the summary line under 50 characters.",
+      "lsc_key": "commit-messages#u1#b0",
+      "passed": true,
+      "evidence": "First line is 29 chars: 'Fix cache eviction off-by-one'"
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 0,
+    "total": 2,
+    "pass_rate": 1.0
+  }
+}

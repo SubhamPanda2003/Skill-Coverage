@@ -1,0 +1,16 @@
+{
+  "assertion_results": [
+    {
+      "text": "Always use f-strings for Python string interpolation, never percent-formatting.",
+      "lsc_key": "fstring-required#u0#b0",
+      "passed": true,
+      "evidence": "f-string token found: True"
+    }
+  ],
+  "summary": {
+    "passed": 1,
+    "failed": 0,
+    "total": 1,
+    "pass_rate": 1.0
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "skill_name": "quote-style",
+  "evals": [
+    {
+      "id": "t_quote_style",
+      "prompt": "Write a Python function that returns a greeting message using someone's name.",
+      "expected_output": "A function that builds and returns a greeting string.",
+      "assertions": [
+        {
+          "text": "Always use single quotes for Python string literals, never double quotes.",
+          "lsc_key": "quote-style#u0#b0"
+        }
+      ],
+      "lsc_targets": [
+        [
+          "quote-style",
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "note": "Design prediction for this session's 25-skill expansion: 'uncertain' -- does this instruction plausibly cut against a pretrained default (fight), align with one (align), or is it genuinely unclear (uncertain)? See docs/results.md Part 5."
+}

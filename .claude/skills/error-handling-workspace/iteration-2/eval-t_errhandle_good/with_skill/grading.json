@@ -1,0 +1,40 @@
+{
+  "assertion_results": [
+    {
+      "text": "Catch specific exception types instead of using a bare `except:` clause.",
+      "lsc_key": "error-handling#u0#b0",
+      "passed": true,
+      "evidence": "No bare 'except:' clause found"
+    },
+    {
+      "text": "Always chain the original exception using `raise NewError(msg) from err` when re-raising inside an except block.",
+      "lsc_key": "error-handling#u1#b0",
+      "passed": true,
+      "evidence": "Found chained raise: \"raise FileNotFoundError(\\n                f'File not found: {pandaFilePath}.'\\n            ) from pandaError\""
+    },
+    {
+      "text": "If the error is recoverable then log a warning and continue execution, and if the error is unrecoverable then raise immediately.",
+      "lsc_key": "error-handling#u2#b0",
+      "passed": false,
+      "evidence": "The artifact contains no logging import or `logging.warning` call and treats every error (both `FileNotFoundError` and `json.JSONDecodeError`) by immediately raising and aborting the loop, rather than logging a warning and continuing for any recoverable case as the instruction requires."
+    },
+    {
+      "text": "If the error is recoverable then log a warning and continue execution, and if the error is unrecoverable then raise immediately.",
+      "lsc_key": "error-handling#u2#b1",
+      "passed": false,
+      "evidence": "The artifact raises immediately for both `FileNotFoundError` and `ParseError`/`JSONDecodeError` with no logging import, no `logging.warning(...)` call, and no continuation logic \u2014 there is no recoverable-error path that logs a warning and continues execution as the instruction requires."
+    },
+    {
+      "text": "Never use exceptions to control normal program flow.",
+      "lsc_key": "error-handling#u3#b0",
+      "passed": true,
+      "evidence": "The code only wraps genuine error conditions (`FileNotFoundError` from a missing file, `json.JSONDecodeError` from malformed JSON) in try/except and re-raises them as errors\u2014both are exceptional failure states, not used to implement normal branching logic (e.g., no try/except is used to test existence, iterate, or return early on the happy path)."
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 2,
+    "total": 5,
+    "pass_rate": 0.6
+  }
+}

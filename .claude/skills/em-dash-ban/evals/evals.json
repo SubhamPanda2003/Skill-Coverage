@@ -1,0 +1,24 @@
+{
+  "skill_name": "em-dash-ban",
+  "evals": [
+    {
+      "id": "t_em_dash_ban",
+      "prompt": "Write a short piece of prose explaining what a linked list is, for a beginner programmer.",
+      "expected_output": "A short beginner-friendly explanation of a linked list.",
+      "assertions": [
+        {
+          "text": "Never use an em dash in written prose.",
+          "lsc_key": "em-dash-ban#u0#b0"
+        }
+      ],
+      "lsc_targets": [
+        [
+          "em-dash-ban",
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "note": "Design prediction for this session's 25-skill expansion: 'fight' -- does this instruction plausibly cut against a pretrained default (fight), align with one (align), or is it genuinely unclear (uncertain)? See docs/results.md Part 5."
+}

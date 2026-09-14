@@ -1,0 +1,16 @@
+{
+  "assertion_results": [
+    {
+      "text": "Format currency amounts using a period as the thousands separator and a comma as the decimal separator, for example 1.234,56",
+      "lsc_key": "currency-format#u0#b0",
+      "passed": false,
+      "evidence": "No period-thousands/comma-decimal amount found"
+    }
+  ],
+  "summary": {
+    "passed": 0,
+    "failed": 1,
+    "total": 1,
+    "pass_rate": 0.0
+  }
+}

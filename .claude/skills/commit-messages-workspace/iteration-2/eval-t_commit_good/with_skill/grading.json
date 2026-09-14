@@ -1,0 +1,22 @@
+{
+  "assertion_results": [
+    {
+      "text": "Write the commit message summary in the imperative mood.",
+      "lsc_key": "commit-messages#u0#b0",
+      "passed": true,
+      "evidence": "The summary \"Reject email addresses over 254 chars (RFC 5321)\" uses the imperative verb form \"Reject\" (as opposed to \"Rejects\" or \"Rejected\"), which is the standard imperative mood convention for commit messages."
+    },
+    {
+      "text": "Keep the summary line under 50 characters.",
+      "lsc_key": "commit-messages#u1#b0",
+      "passed": true,
+      "evidence": "First line is 48 chars: 'Reject email addresses over 254 chars (RFC 5321)'"
+    }
+  ],
+  "summary": {
+    "passed": 2,
+    "failed": 0,
+    "total": 2,
+    "pass_rate": 1.0
+  }
+}

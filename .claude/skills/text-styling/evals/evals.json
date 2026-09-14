@@ -1,0 +1,59 @@
+{
+  "skill_name": "text-styling",
+  "evals": [
+    {
+      "id": "t_blue",
+      "prompt": "Write CSS that styles a page heading blue.",
+      "expected_output": "The heading is styled blue with the font-size the skill specifies for that color.",
+      "assertions": [
+        {
+          "text": "If the color of the text is blue then change the font to 20px and if color is red then change it to 30 px.",
+          "lsc_key": "text-styling#u0#b0"
+        }
+      ],
+      "lsc_targets": [
+        [
+          "text-styling",
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "id": "t_red",
+      "prompt": "Write CSS that styles a page heading red.",
+      "expected_output": "The heading is styled red with the font-size the skill specifies for that color.",
+      "assertions": [
+        {
+          "text": "If the color of the text is blue then change the font to 20px and if color is red then change it to 30 px.",
+          "lsc_key": "text-styling#u0#b1"
+        }
+      ],
+      "lsc_targets": [
+        [
+          "text-styling",
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "t_red_unretrieved",
+      "prompt": "Ship the heading in red now.",
+      "expected_output": "The heading is styled red with the correct font-size, phrased so the skill isn't obviously keyword-cued.",
+      "assertions": [
+        {
+          "text": "If the color of the text is blue then change the font to 20px and if color is red then change it to 30 px.",
+          "lsc_key": "text-styling#u0#b1"
+        }
+      ],
+      "lsc_targets": [
+        [
+          "text-styling",
+          0,
+          1
+        ]
+      ]
+    }
+  ]
+}

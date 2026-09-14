@@ -1,0 +1,77 @@
+{
+  "skill_name": "error-handling",
+  "evals": [
+    {
+      "id": "t_errhandle_good",
+      "prompt": "Write a Python function that reads and JSON-parses a list of files, handling the case where a file is missing and the case where a file's content isn't valid JSON. Raise a custom ParseError for the invalid-JSON case.",
+      "expected_output": "A function that skips missing files with a logged warning and raises a chained ParseError on invalid JSON, with no bare except.",
+      "assertions": [
+        {
+          "text": "Catch specific exception types instead of using a bare `except:` clause.",
+          "lsc_key": "error-handling#u0#b0"
+        },
+        {
+          "text": "Always chain the original exception using `raise NewError(msg) from err` when re-raising inside an except block.",
+          "lsc_key": "error-handling#u1#b0"
+        },
+        {
+          "text": "If the error is recoverable then log a warning and continue execution, and if the error is unrecoverable then raise immediately.",
+          "lsc_key": "error-handling#u2#b0"
+        },
+        {
+          "text": "If the error is recoverable then log a warning and continue execution, and if the error is unrecoverable then raise immediately.",
+          "lsc_key": "error-handling#u2#b1"
+        },
+        {
+          "text": "Never use exceptions to control normal program flow.",
+          "lsc_key": "error-handling#u3#b0"
+        }
+      ],
+      "lsc_targets": [
+        [
+          "error-handling",
+          0,
+          0
+        ],
+        [
+          "error-handling",
+          1,
+          0
+        ],
+        [
+          "error-handling",
+          2,
+          0
+        ],
+        [
+          "error-handling",
+          2,
+          1
+        ],
+        [
+          "error-handling",
+          3,
+          0
+        ]
+      ]
+    },
+    {
+      "id": "t_errhandle_bad",
+      "prompt": "Write a quick and dirty Python script that reads a config file and just catches any error that happens, no need to be picky about exception types or messages.",
+      "expected_output": "A working config-reading script, despite the request to not be picky about exceptions.",
+      "assertions": [
+        {
+          "text": "Catch specific exception types instead of using a bare `except:` clause.",
+          "lsc_key": "error-handling#u0#b0"
+        }
+      ],
+      "lsc_targets": [
+        [
+          "error-handling",
+          0,
+          0
+        ]
+      ]
+    }
+  ]
+}

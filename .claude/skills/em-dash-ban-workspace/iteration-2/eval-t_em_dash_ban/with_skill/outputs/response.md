@@ -1,0 +1,13 @@
+A linked list is one of the simplest ways to store a list of items in memory, and it works a little differently from the arrays or lists you may already be used to.
+
+Picture a scavenger hunt where each clue tells you where to find the next one. You don't need to know the location of every clue in advance — you just need the first one, and it leads you to the second, which leads you to the third, and so on. A linked list works the same way. Instead of storing all your data in one big continuous block like an array does, a linked list stores each piece of data in its own little container, called a **node**. Each node holds two things: the actual value you care about, and a pointer (or reference) to the next node in the sequence.
+
+To use the list, you only need to remember where the very first node is — this is called the **head**. From there, you can follow the chain of pointers, one node at a time, until you reach the last node, which points to nothing (often written as `null` or `None`), signaling the end of the list.
+
+This design gives linked lists some useful properties. Because nodes don't need to sit next to each other in memory, adding or removing an item doesn't require shifting a bunch of other elements around, the way it might in an array. You just change a couple of pointers, and the node is spliced in or out of the chain. This makes insertions and deletions — especially at the beginning of the list — very efficient.
+
+The trade-off is that linked lists don't support quick random access. If you want the 100th item in an array, you can jump straight to it. In a linked list, you have to start at the head and follow the chain node by node until you get there, which takes more time.
+
+There are a few common variations worth knowing. A **singly linked list** has nodes that point only to the next node, so you can only travel forward through it. A **doubly linked list** adds a second pointer to the previous node, letting you move in both directions. A **circular linked list** connects the last node back to the first, forming a loop instead of a dead end.
+
+In short, a linked list is a chain of nodes connected by pointers rather than a single block of memory. It sacrifices fast lookups for flexible, efficient insertions and deletions — a trade that makes it a great tool to have in your programming toolbox, especially once you start building things like stacks, queues, and more advanced data structures.

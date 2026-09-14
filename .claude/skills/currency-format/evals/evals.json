@@ -1,0 +1,24 @@
+{
+  "skill_name": "currency-format",
+  "evals": [
+    {
+      "id": "t_currency_format",
+      "prompt": "Write a Python function that formats a total price for display to a customer.",
+      "expected_output": "A function that formats a price for display.",
+      "assertions": [
+        {
+          "text": "Format currency amounts using a period as the thousands separator and a comma as the decimal separator, for example 1.234,56",
+          "lsc_key": "currency-format#u0#b0"
+        }
+      ],
+      "lsc_targets": [
+        [
+          "currency-format",
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "note": "Design prediction for this session's 25-skill expansion: 'fight' -- does this instruction plausibly cut against a pretrained default (fight), align with one (align), or is it genuinely unclear (uncertain)? See docs/results.md Part 5."
+}

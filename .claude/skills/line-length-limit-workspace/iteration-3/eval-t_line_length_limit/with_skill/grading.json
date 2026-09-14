@@ -1,0 +1,16 @@
+{
+  "assertion_results": [
+    {
+      "text": "Wrap all code lines at 60 characters or fewer.",
+      "lsc_key": "line-length-limit#u0#b0",
+      "passed": true,
+      "evidence": "Longest code line is 54 chars (limit 60)"
+    }
+  ],
+  "summary": {
+    "passed": 1,
+    "failed": 0,
+    "total": 1,
+    "pass_rate": 1.0
+  }
+}

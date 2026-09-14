@@ -1,0 +1,24 @@
+{
+  "skill_name": "constant-naming",
+  "evals": [
+    {
+      "id": "t_constant_naming",
+      "prompt": "Write a short Python module that defines the maximum allowed file size as a constant and a function that checks a file's size against it.",
+      "expected_output": "A module with a max-file-size constant and a checking function.",
+      "assertions": [
+        {
+          "text": "Name every module-level constant in uppercase with underscores.",
+          "lsc_key": "constant-naming#u0#b0"
+        }
+      ],
+      "lsc_targets": [
+        [
+          "constant-naming",
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "note": "Design prediction for this session's 25-skill expansion: 'align' -- does this instruction plausibly cut against a pretrained default (fight), align with one (align), or is it genuinely unclear (uncertain)? See docs/results.md Part 5."
+}

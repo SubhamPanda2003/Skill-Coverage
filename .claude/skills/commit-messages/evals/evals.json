@@ -1,0 +1,59 @@
+{
+  "skill_name": "commit-messages",
+  "evals": [
+    {
+      "id": "t_commit_good",
+      "prompt": "Write a commit message for this change: the `validate_email` function was updated to also reject addresses longer than 254 characters, per RFC 5321, and a regression test was added for that case.",
+      "expected_output": "A commit message summary line in the imperative mood, under 50 characters.",
+      "assertions": [
+        {
+          "text": "Write the commit message summary in the imperative mood.",
+          "lsc_key": "commit-messages#u0#b0"
+        },
+        {
+          "text": "Keep the summary line under 50 characters.",
+          "lsc_key": "commit-messages#u1#b0"
+        }
+      ],
+      "lsc_targets": [
+        [
+          "commit-messages",
+          0,
+          0
+        ],
+        [
+          "commit-messages",
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "id": "t_commit_bad",
+      "prompt": "Draft a commit message summarizing the fix: turned out the cache eviction check used `<=` instead of `<`, so entries were getting evicted one cycle too early.",
+      "expected_output": "A commit message summary line in the imperative mood, under 50 characters, despite the casual request.",
+      "assertions": [
+        {
+          "text": "Write the commit message summary in the imperative mood.",
+          "lsc_key": "commit-messages#u0#b0"
+        },
+        {
+          "text": "Keep the summary line under 50 characters.",
+          "lsc_key": "commit-messages#u1#b0"
+        }
+      ],
+      "lsc_targets": [
+        [
+          "commit-messages",
+          0,
+          0
+        ],
+        [
+          "commit-messages",
+          1,
+          0
+        ]
+      ]
+    }
+  ]
+}

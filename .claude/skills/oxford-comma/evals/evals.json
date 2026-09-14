@@ -1,0 +1,24 @@
+{
+  "skill_name": "oxford-comma",
+  "evals": [
+    {
+      "id": "t_oxford_comma",
+      "prompt": "Write a one-sentence, comma-separated list of what's in a fruit basket containing apples, bananas, and oranges.",
+      "expected_output": "A one-sentence description of the fruit basket's contents.",
+      "assertions": [
+        {
+          "text": "Always use the Oxford comma in comma-separated lists.",
+          "lsc_key": "oxford-comma#u0#b0"
+        }
+      ],
+      "lsc_targets": [
+        [
+          "oxford-comma",
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "note": "Design prediction for this session's 25-skill expansion: 'align' -- does this instruction plausibly cut against a pretrained default (fight), align with one (align), or is it genuinely unclear (uncertain)? See docs/results.md Part 5."
+}

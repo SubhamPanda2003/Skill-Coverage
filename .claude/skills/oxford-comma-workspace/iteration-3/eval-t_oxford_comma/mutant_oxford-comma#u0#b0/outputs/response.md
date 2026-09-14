@@ -1,0 +1,1 @@
+The fruit basket contains apples, bananas, and oranges.

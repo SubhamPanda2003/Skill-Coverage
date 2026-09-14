@@ -1,0 +1,1 @@
+Reject email addresses longer than 254 chars

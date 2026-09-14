@@ -1,0 +1,788 @@
+{
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 0.586021505376344,
+        "stddev": 0.4692535209468667
+      }
+    },
+    "without_skill": null,
+    "delta": null
+  },
+  "TaskSuiteCoverage": 1.0,
+  "RetrievalRate": 1.0,
+  "ComplianceCoverage": 0.631578947368421,
+  "VerifiableCoverage": 0.5806451612903226,
+  "Verifiable_n": 31,
+  "JudgedCoverage": 0.8571428571428571,
+  "Judged_n": 7,
+  "ConflictPairsDetected": 7,
+  "ConflictInstantiatedRate": 0.14285714285714285,
+  "ConflictResolutionRate": 1.0,
+  "ConflictResolutionInstances": 2,
+  "per_key": {
+    "text-styling#u0#b0": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass"
+      ],
+      "verified": true
+    },
+    "text-styling#u0#b1": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass"
+      ],
+      "verified": true
+    },
+    "indent-tabs#u0#b0": {
+      "status": "Fail",
+      "verdicts": [
+        "Fail",
+        "Fail"
+      ],
+      "verified": true
+    },
+    "indent-tabs#u1#b0": {
+      "status": "Fail",
+      "verdicts": [
+        "Fail",
+        "Fail"
+      ],
+      "verified": true
+    },
+    "indent-spaces#u0#b0": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass",
+        "Pass"
+      ],
+      "verified": true
+    },
+    "commit-messages#u0#b0": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass",
+        "Pass"
+      ],
+      "verified": false
+    },
+    "commit-messages#u1#b0": {
+      "status": "Pass",
+      "verdicts": [
+        "Fail",
+        "Pass"
+      ],
+      "verified": true
+    },
+    "error-handling#u0#b0": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass",
+        "Pass",
+        "Pass"
+      ],
+      "verified": true
+    },
+    "error-handling#u1#b0": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass",
+        "Pass"
+      ],
+      "verified": true
+    },
+    "error-handling#u2#b0": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass"
+      ],
+      "verified": false
+    },
+    "error-handling#u2#b1": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass"
+      ],
+      "verified": false
+    },
+    "error-handling#u3#b0": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass"
+      ],
+      "verified": false
+    },
+    "docstring-style#u0#b0": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass",
+        "Fail"
+      ],
+      "verified": false
+    },
+    "docstring-style#u1#b0": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass",
+        "Fail",
+        "Pass"
+      ],
+      "verified": false
+    },
+    "docstring-style#u2#b0": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass",
+        "Fail",
+        "Pass"
+      ],
+      "verified": true
+    },
+    "docstring-style#u2#b1": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass",
+        "Fail",
+        "Pass"
+      ],
+      "verified": true
+    },
+    "docstring-style#u3#b0": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass"
+      ],
+      "verified": true
+    },
+    "date-format#u0#b0": {
+      "status": "Fail",
+      "verdicts": [
+        "Fail"
+      ],
+      "verified": true
+    },
+    "quote-style#u0#b0": {
+      "status": "Fail",
+      "verdicts": [
+        "Fail"
+      ],
+      "verified": true
+    },
+    "variable-naming#u0#b0": {
+      "status": "Fail",
+      "verdicts": [
+        "Fail"
+      ],
+      "verified": true
+    },
+    "variable-naming#u1#b0": {
+      "status": "Fail",
+      "verdicts": [
+        "Fail"
+      ],
+      "verified": true
+    },
+    "line-length-limit#u0#b0": {
+      "status": "Fail",
+      "verdicts": [
+        "Fail"
+      ],
+      "verified": true
+    },
+    "currency-format#u0#b0": {
+      "status": "Fail",
+      "verdicts": [
+        "Fail"
+      ],
+      "verified": true
+    },
+    "boolean-naming#u0#b0": {
+      "status": "Fail",
+      "verdicts": [
+        "Fail"
+      ],
+      "verified": true
+    },
+    "measurement-units#u0#b0": {
+      "status": "Fail",
+      "verdicts": [
+        "Fail"
+      ],
+      "verified": true
+    },
+    "string-concat#u0#b0": {
+      "status": "Fail",
+      "verdicts": [
+        "Fail"
+      ],
+      "verified": true
+    },
+    "string-concat#u1#b0": {
+      "status": "Fail",
+      "verdicts": [
+        "Fail"
+      ],
+      "verified": true
+    },
+    "test-naming#u0#b0": {
+      "status": "Fail",
+      "verdicts": [
+        "Fail"
+      ],
+      "verified": true
+    },
+    "em-dash-ban#u0#b0": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass"
+      ],
+      "verified": true
+    },
+    "passive-voice#u0#b0": {
+      "status": "Fail",
+      "verdicts": [
+        "Fail"
+      ],
+      "verified": false
+    },
+    "docstring-quotes#u0#b0": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass"
+      ],
+      "verified": true
+    },
+    "constant-naming#u0#b0": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass"
+      ],
+      "verified": true
+    },
+    "mutable-default-ban#u0#b0": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass"
+      ],
+      "verified": true
+    },
+    "fstring-required#u0#b0": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass"
+      ],
+      "verified": true
+    },
+    "oxford-comma#u0#b0": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass"
+      ],
+      "verified": true
+    },
+    "trailing-comma#u0#b0": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass"
+      ],
+      "verified": true
+    },
+    "error-period#u0#b0": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass"
+      ],
+      "verified": true
+    },
+    "semicolon-ban#u0#b0": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass"
+      ],
+      "verified": true
+    }
+  },
+  "per_task": {
+    "t_boolean_naming": {
+      "boolean-naming#u0#b0": "Fail"
+    },
+    "t_commit_good": {
+      "commit-messages#u0#b0": "Pass",
+      "commit-messages#u1#b0": "Fail"
+    },
+    "t_commit_bad": {
+      "commit-messages#u0#b0": "Pass",
+      "commit-messages#u1#b0": "Pass"
+    },
+    "t_constant_naming": {
+      "constant-naming#u0#b0": "Pass"
+    },
+    "t_currency_format": {
+      "currency-format#u0#b0": "Fail"
+    },
+    "t_date_format": {
+      "date-format#u0#b0": "Fail"
+    },
+    "t_docstring_quotes": {
+      "docstring-quotes#u0#b0": "Pass"
+    },
+    "t_docstring_good": {
+      "docstring-style#u0#b0": "Pass",
+      "docstring-style#u1#b0": "Pass",
+      "docstring-style#u2#b0": "Pass",
+      "docstring-style#u2#b1": "Pass",
+      "docstring-style#u3#b0": "Pass"
+    },
+    "t_docstring_bad": {
+      "docstring-style#u0#b0": "Fail",
+      "docstring-style#u1#b0": "Fail",
+      "docstring-style#u2#b0": "Fail",
+      "docstring-style#u2#b1": "Fail"
+    },
+    "t_em_dash_ban": {
+      "em-dash-ban#u0#b0": "Pass"
+    },
+    "t_errhandle_good": {
+      "error-handling#u0#b0": "Pass",
+      "error-handling#u1#b0": "Pass",
+      "error-handling#u2#b0": "Pass",
+      "error-handling#u2#b1": "Pass",
+      "error-handling#u3#b0": "Pass"
+    },
+    "t_errhandle_bad": {
+      "error-handling#u0#b0": "Pass"
+    },
+    "t_error_period": {
+      "error-period#u0#b0": "Pass"
+    },
+    "t_fstring_required": {
+      "fstring-required#u0#b0": "Pass"
+    },
+    "t_line_length_limit": {
+      "line-length-limit#u0#b0": "Fail"
+    },
+    "t_measurement_units": {
+      "measurement-units#u0#b0": "Fail"
+    },
+    "t_mutable_default_ban": {
+      "mutable-default-ban#u0#b0": "Pass"
+    },
+    "t_oxford_comma": {
+      "oxford-comma#u0#b0": "Pass"
+    },
+    "t_passive_voice": {
+      "passive-voice#u0#b0": "Fail"
+    },
+    "t_quote_style": {
+      "quote-style#u0#b0": "Fail"
+    },
+    "t_semicolon_ban": {
+      "semicolon-ban#u0#b0": "Pass"
+    },
+    "t_string_concat": {
+      "string-concat#u0#b0": "Fail",
+      "string-concat#u1#b0": "Fail"
+    },
+    "t_test_naming": {
+      "test-naming#u0#b0": "Fail"
+    },
+    "t_blue": {
+      "text-styling#u0#b0": "Pass"
+    },
+    "t_red": {
+      "text-styling#u0#b1": "Pass"
+    },
+    "t_red_unretrieved": {
+      "text-styling#u0#b1": "Unretrieved"
+    },
+    "t_trailing_comma": {
+      "trailing-comma#u0#b0": "Pass"
+    },
+    "t_variable_naming": {
+      "variable-naming#u0#b0": "Fail",
+      "variable-naming#u1#b0": "Fail"
+    },
+    "t_code_consistent": {
+      "indent-tabs#u0#b0": "Fail",
+      "indent-tabs#u1#b0": "Fail",
+      "indent-spaces#u0#b0": "Pass"
+    },
+    "t_code_mixed": {
+      "indent-tabs#u0#b0": "Fail",
+      "indent-tabs#u1#b0": "Fail",
+      "indent-spaces#u0#b0": "Pass"
+    },
+    "t_combo_err_doc": {
+      "error-handling#u0#b0": "Pass",
+      "error-handling#u1#b0": "Pass",
+      "docstring-style#u1#b0": "Pass",
+      "docstring-style#u2#b0": "Pass",
+      "docstring-style#u2#b1": "Pass"
+    }
+  },
+  "conflict_pairs_detected": [
+    {
+      "a": [
+        "indent-tabs",
+        0,
+        0
+      ],
+      "b": [
+        "indent-spaces",
+        0,
+        0
+      ],
+      "a_text": "Always use tabs for indentation when writing code.",
+      "b_text": "Always use spaces for indentation when writing code."
+    },
+    {
+      "a": [
+        "indent-tabs",
+        0,
+        0
+      ],
+      "b": [
+        "line-length-limit",
+        0,
+        0
+      ],
+      "a_text": "Always use tabs for indentation when writing code.",
+      "b_text": "Wrap all code lines at 60 characters or fewer."
+    },
+    {
+      "a": [
+        "indent-tabs",
+        1,
+        0
+      ],
+      "b": [
+        "docstring-style",
+        3,
+        0
+      ],
+      "a_text": "End every file with a trailing newline character.",
+      "b_text": "Wrap every docstring line at 79 characters or fewer."
+    },
+    {
+      "a": [
+        "indent-spaces",
+        0,
+        0
+      ],
+      "b": [
+        "line-length-limit",
+        0,
+        0
+      ],
+      "a_text": "Always use spaces for indentation when writing code.",
+      "b_text": "Wrap all code lines at 60 characters or fewer."
+    },
+    {
+      "a": [
+        "commit-messages",
+        1,
+        0
+      ],
+      "b": [
+        "docstring-style",
+        3,
+        0
+      ],
+      "a_text": "Keep the summary line under 50 characters.",
+      "b_text": "Wrap every docstring line at 79 characters or fewer."
+    },
+    {
+      "a": [
+        "commit-messages",
+        1,
+        0
+      ],
+      "b": [
+        "line-length-limit",
+        0,
+        0
+      ],
+      "a_text": "Keep the summary line under 50 characters.",
+      "b_text": "Wrap all code lines at 60 characters or fewer."
+    },
+    {
+      "a": [
+        "docstring-style",
+        3,
+        0
+      ],
+      "b": [
+        "line-length-limit",
+        0,
+        0
+      ],
+      "a_text": "Wrap every docstring line at 79 characters or fewer.",
+      "b_text": "Wrap all code lines at 60 characters or fewer."
+    }
+  ],
+  "conflict_results": [
+    {
+      "pair": {
+        "a": [
+          "indent-tabs",
+          0,
+          0
+        ],
+        "b": [
+          "indent-spaces",
+          0,
+          0
+        ]
+      },
+      "instantiated_tasks": [
+        "t_code_consistent",
+        "t_code_mixed"
+      ],
+      "resolution_verdicts": [
+        "Pass",
+        "Pass"
+      ]
+    },
+    {
+      "pair": {
+        "a": [
+          "indent-tabs",
+          0,
+          0
+        ],
+        "b": [
+          "line-length-limit",
+          0,
+          0
+        ]
+      },
+      "instantiated_tasks": [],
+      "resolution_verdicts": []
+    },
+    {
+      "pair": {
+        "a": [
+          "indent-tabs",
+          1,
+          0
+        ],
+        "b": [
+          "docstring-style",
+          3,
+          0
+        ]
+      },
+      "instantiated_tasks": [],
+      "resolution_verdicts": []
+    },
+    {
+      "pair": {
+        "a": [
+          "indent-spaces",
+          0,
+          0
+        ],
+        "b": [
+          "line-length-limit",
+          0,
+          0
+        ]
+      },
+      "instantiated_tasks": [],
+      "resolution_verdicts": []
+    },
+    {
+      "pair": {
+        "a": [
+          "commit-messages",
+          1,
+          0
+        ],
+        "b": [
+          "docstring-style",
+          3,
+          0
+        ]
+      },
+      "instantiated_tasks": [],
+      "resolution_verdicts": []
+    },
+    {
+      "pair": {
+        "a": [
+          "commit-messages",
+          1,
+          0
+        ],
+        "b": [
+          "line-length-limit",
+          0,
+          0
+        ]
+      },
+      "instantiated_tasks": [],
+      "resolution_verdicts": []
+    },
+    {
+      "pair": {
+        "a": [
+          "docstring-style",
+          3,
+          0
+        ],
+        "b": [
+          "line-length-limit",
+          0,
+          0
+        ]
+      },
+      "instantiated_tasks": [],
+      "resolution_verdicts": []
+    }
+  ],
+  "mutation_trials": [
+    {
+      "key": "constant-naming#u0#b0",
+      "task_id": "t_constant_naming",
+      "original_verdict": "Pass",
+      "mutant_verdict": "Pass",
+      "killed": false
+    },
+    {
+      "key": "docstring-quotes#u0#b0",
+      "task_id": "t_docstring_quotes",
+      "original_verdict": "Pass",
+      "mutant_verdict": "Pass",
+      "killed": false
+    },
+    {
+      "key": "docstring-style#u2#b0",
+      "task_id": "t_docstring_good",
+      "original_verdict": "Pass",
+      "mutant_verdict": "Pass",
+      "killed": false
+    },
+    {
+      "key": "docstring-style#u2#b1",
+      "task_id": "t_docstring_good",
+      "original_verdict": "Pass",
+      "mutant_verdict": "Pass",
+      "killed": false
+    },
+    {
+      "key": "docstring-style#u3#b0",
+      "task_id": "t_docstring_good",
+      "original_verdict": "Pass",
+      "mutant_verdict": "Pass",
+      "killed": false
+    },
+    {
+      "key": "em-dash-ban#u0#b0",
+      "task_id": "t_em_dash_ban",
+      "original_verdict": "Pass",
+      "mutant_verdict": "Pass",
+      "killed": false
+    },
+    {
+      "key": "error-handling#u0#b0",
+      "task_id": "t_errhandle_good",
+      "original_verdict": "Pass",
+      "mutant_verdict": "Pass",
+      "killed": false
+    },
+    {
+      "key": "error-handling#u1#b0",
+      "task_id": "t_errhandle_good",
+      "original_verdict": "Pass",
+      "mutant_verdict": "Pass",
+      "killed": false
+    },
+    {
+      "key": "error-handling#u0#b0",
+      "task_id": "t_errhandle_bad",
+      "original_verdict": "Pass",
+      "mutant_verdict": "Pass",
+      "killed": false
+    },
+    {
+      "key": "fstring-required#u0#b0",
+      "task_id": "t_fstring_required",
+      "original_verdict": "Pass",
+      "mutant_verdict": "Pass",
+      "killed": false
+    },
+    {
+      "key": "mutable-default-ban#u0#b0",
+      "task_id": "t_mutable_default_ban",
+      "original_verdict": "Pass",
+      "mutant_verdict": "Pass",
+      "killed": false
+    },
+    {
+      "key": "oxford-comma#u0#b0",
+      "task_id": "t_oxford_comma",
+      "original_verdict": "Pass",
+      "mutant_verdict": "Pass",
+      "killed": false
+    },
+    {
+      "key": "semicolon-ban#u0#b0",
+      "task_id": "t_semicolon_ban",
+      "original_verdict": "Pass",
+      "mutant_verdict": "Pass",
+      "killed": false
+    },
+    {
+      "key": "trailing-comma#u0#b0",
+      "task_id": "t_trailing_comma",
+      "original_verdict": "Pass",
+      "mutant_verdict": "Pass",
+      "killed": false
+    },
+    {
+      "key": "indent-spaces#u0#b0",
+      "task_id": "t_code_consistent",
+      "original_verdict": "Pass",
+      "mutant_verdict": "Pass",
+      "killed": false
+    },
+    {
+      "key": "indent-spaces#u0#b0",
+      "task_id": "t_code_mixed",
+      "original_verdict": "Pass",
+      "mutant_verdict": "Fail",
+      "killed": true
+    },
+    {
+      "key": "docstring-style#u2#b0",
+      "task_id": "t_combo_err_doc",
+      "original_verdict": "Pass",
+      "mutant_verdict": "Pass",
+      "killed": false
+    },
+    {
+      "key": "docstring-style#u2#b1",
+      "task_id": "t_combo_err_doc",
+      "original_verdict": "Pass",
+      "mutant_verdict": "Pass",
+      "killed": false
+    },
+    {
+      "key": "error-handling#u0#b0",
+      "task_id": "t_combo_err_doc",
+      "original_verdict": "Pass",
+      "mutant_verdict": "Pass",
+      "killed": false
+    },
+    {
+      "key": "error-handling#u1#b0",
+      "task_id": "t_combo_err_doc",
+      "original_verdict": "Pass",
+      "mutant_verdict": "Pass",
+      "killed": false
+    }
+  ],
+  "MutationTrials": 20,
+  "MutationScore": 0.05
+}

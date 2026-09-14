@@ -1,0 +1,16 @@
+{
+  "assertion_results": [
+    {
+      "text": "Always chain the original exception using `raise NewError(msg) from err` when re-raising inside an except block.",
+      "lsc_key": "error-handling#u1#b0",
+      "passed": true,
+      "evidence": "Found chained raise: \"raise InvalidInputError(\\n            f'Cannot convert {value!r} to an integer.'\\n        ) from err\""
+    }
+  ],
+  "summary": {
+    "passed": 1,
+    "failed": 0,
+    "total": 1,
+    "pass_rate": 1.0
+  }
+}

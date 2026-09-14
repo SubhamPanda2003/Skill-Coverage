@@ -1,0 +1,24 @@
+{
+  "skill_name": "error-period",
+  "evals": [
+    {
+      "id": "t_error_period",
+      "prompt": "Write a Python function that raises a ValueError with a message when given a negative number.",
+      "expected_output": "A function raising a ValueError for negative input.",
+      "assertions": [
+        {
+          "text": "Every error message string must end with a period.",
+          "lsc_key": "error-period#u0#b0"
+        }
+      ],
+      "lsc_targets": [
+        [
+          "error-period",
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "note": "Design prediction for this session's 25-skill expansion: 'uncertain' -- does this instruction plausibly cut against a pretrained default (fight), align with one (align), or is it genuinely unclear (uncertain)? See docs/results.md Part 5."
+}

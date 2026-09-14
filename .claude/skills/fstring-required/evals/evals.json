@@ -1,0 +1,24 @@
+{
+  "skill_name": "fstring-required",
+  "evals": [
+    {
+      "id": "t_fstring_required",
+      "prompt": "Write a Python function that builds a log message string including a username and timestamp.",
+      "expected_output": "A function building a log message with a username and timestamp.",
+      "assertions": [
+        {
+          "text": "Always use f-strings for Python string interpolation, never percent-formatting.",
+          "lsc_key": "fstring-required#u0#b0"
+        }
+      ],
+      "lsc_targets": [
+        [
+          "fstring-required",
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "note": "Design prediction for this session's 25-skill expansion: 'align' -- does this instruction plausibly cut against a pretrained default (fight), align with one (align), or is it genuinely unclear (uncertain)? See docs/results.md Part 5."
+}

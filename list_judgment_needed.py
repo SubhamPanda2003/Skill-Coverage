@@ -8,7 +8,7 @@ from lsc import core, oracle, bench_io
 
 def main():
     skills = core.load_skills(bench_io.SKILL_DIRS)
-    tasks = bench_io.load_tasks()
+    tasks = bench_io.load_evals()
     for task in tasks:
         for key in task["expects"]:
             skill, ui, bi = key

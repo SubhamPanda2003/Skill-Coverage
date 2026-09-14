@@ -1,0 +1,34 @@
+{
+  "assertion_results": [
+    {
+      "text": "Write docstrings in Google style, with `Args:`, `Returns:`, and `Raises:` sections where applicable.",
+      "lsc_key": "docstring-style#u0#b0",
+      "passed": false,
+      "evidence": "The function `calculate_shipping_cost` has no docstring at all (only a plain `# calculate shipping cost from weight and distance` comment above it), so there are no `Args:`, `Returns:`, or `Raises:` sections despite the function raising `ValueError`."
+    },
+    {
+      "text": "Start every docstring with a single-line summary written in the imperative mood.",
+      "lsc_key": "docstring-style#u1#b0",
+      "passed": false,
+      "evidence": "The function `calculate_shipping_cost` has no docstring at all\u2014only a preceding `# calculate shipping cost from weight and distance` comment\u2014so there is no docstring beginning with an imperative-mood summary as required."
+    },
+    {
+      "text": "If the function takes parameters then document every parameter under `Args:`, and if the function can raise an exception then document it under `Raises:`.",
+      "lsc_key": "docstring-style#u2#b0",
+      "passed": false,
+      "evidence": "'Args:' not found in artifact"
+    },
+    {
+      "text": "If the function takes parameters then document every parameter under `Args:`, and if the function can raise an exception then document it under `Raises:`.",
+      "lsc_key": "docstring-style#u2#b1",
+      "passed": false,
+      "evidence": "'Raises:' not found in artifact"
+    }
+  ],
+  "summary": {
+    "passed": 0,
+    "failed": 4,
+    "total": 4,
+    "pass_rate": 0.0
+  }
+}

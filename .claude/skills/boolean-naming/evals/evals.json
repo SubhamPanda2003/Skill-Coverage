@@ -1,0 +1,24 @@
+{
+  "skill_name": "boolean-naming",
+  "evals": [
+    {
+      "id": "t_boolean_naming",
+      "prompt": "Write a Python function that checks whether a user's account is active and returns a boolean.",
+      "expected_output": "A function returning whether an account is active.",
+      "assertions": [
+        {
+          "text": "Never prefix boolean variable or parameter names with is, has, or should.",
+          "lsc_key": "boolean-naming#u0#b0"
+        }
+      ],
+      "lsc_targets": [
+        [
+          "boolean-naming",
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "note": "Design prediction for this session's 25-skill expansion: 'fight' -- does this instruction plausibly cut against a pretrained default (fight), align with one (align), or is it genuinely unclear (uncertain)? See docs/results.md Part 5."
+}

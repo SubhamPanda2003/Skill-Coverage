@@ -1,0 +1,24 @@
+{
+  "skill_name": "date-format",
+  "evals": [
+    {
+      "id": "t_date_format",
+      "prompt": "Write a Python function that formats today's date as a string for a report header.",
+      "expected_output": "A function that returns today's date formatted as a string.",
+      "assertions": [
+        {
+          "text": "Always write dates in DD/MM/YYYY format.",
+          "lsc_key": "date-format#u0#b0"
+        }
+      ],
+      "lsc_targets": [
+        [
+          "date-format",
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "note": "Design prediction for this session's 25-skill expansion: 'fight' -- does this instruction plausibly cut against a pretrained default (fight), align with one (align), or is it genuinely unclear (uncertain)? See docs/results.md Part 5."
+}

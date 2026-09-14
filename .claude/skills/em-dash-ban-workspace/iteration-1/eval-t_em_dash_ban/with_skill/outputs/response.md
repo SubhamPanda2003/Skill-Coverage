@@ -1,0 +1,13 @@
+A linked list is one of the simplest ways to store a collection of items, and once it clicks, it becomes a tool you reach for constantly.
+
+Picture a treasure hunt. You're not given a map showing every clue's location at once. Instead, you get a note that says "your next clue is at the old oak tree." You walk there, find another note pointing to the next spot, and so on until you reach a note that says "you're done, no more clues." That's exactly how a linked list works.
+
+Each piece of data lives inside something called a node. A node has two jobs: it holds a value (the actual data you care about, like a number or a name), and it holds a pointer, sometimes called a reference, to the next node in the list. The list itself just keeps track of where the very first node is, called the head. From there, you can hop from node to node by following the pointers, until you reach a node whose pointer points to nothing, which tells you the list has ended.
+
+This is different from an array, where all your items sit next to each other in one continuous block of memory, and you can jump straight to item number five just by doing a bit of math on its position. In a linked list, there's no such shortcut. If you want the fifth item, you have to start at the head and walk through the first four nodes one at a time. This makes reading a specific item slower than with an array.
+
+So why bother with linked lists at all? Their strength shows up when you add or remove items. With an array, inserting something in the middle often means shifting every item after it to make room, like asking an entire line of people to shuffle over. With a linked list, you just create a new node and adjust a couple of pointers so it slots into place. Nothing else in the list has to move. The same is true for deleting an item: you simply skip over the node you no longer want by reconnecting the pointers around it.
+
+Linked lists come in a few flavors. A singly linked list, the kind described above, only lets you move forward from node to node. A doubly linked list gives each node a second pointer back to the previous node, letting you travel in both directions. A circular linked list connects the last node back to the first, forming a loop instead of a dead end.
+
+You won't necessarily reach for a linked list every day, but understanding one teaches you something valuable about how data structures are actually built out of small, connected pieces rather than handed to you as a single block. It's a foundation for understanding more advanced structures like stacks, queues, and trees, which are all built on this same idea of connecting individual pieces together.

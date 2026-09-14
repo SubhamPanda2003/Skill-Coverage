@@ -1,0 +1,16 @@
+{
+  "assertion_results": [
+    {
+      "text": "Always use the Oxford comma in comma-separated lists.",
+      "lsc_key": "oxford-comma#u0#b0",
+      "passed": true,
+      "evidence": "Found Oxford comma before 'and': ', and oranges'"
+    }
+  ],
+  "summary": {
+    "passed": 1,
+    "failed": 0,
+    "total": 1,
+    "pass_rate": 1.0
+  }
+}

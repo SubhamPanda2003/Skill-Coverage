@@ -1,0 +1,16 @@
+{
+  "assertion_results": [
+    {
+      "text": "Never end a Python statement with a semicolon.",
+      "lsc_key": "semicolon-ban#u0#b0",
+      "passed": true,
+      "evidence": "No line ends with a semicolon"
+    }
+  ],
+  "summary": {
+    "passed": 1,
+    "failed": 0,
+    "total": 1,
+    "pass_rate": 1.0
+  }
+}

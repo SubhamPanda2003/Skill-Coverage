@@ -1,0 +1,43 @@
+{
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 1.0,
+        "stddev": 0.0
+      }
+    },
+    "without_skill": null,
+    "delta": null
+  },
+  "lsc_funnel_metrics": {
+    "TaskSuiteCoverage": 1.0,
+    "RetrievalRate": 1.0,
+    "ComplianceCoverage": 1.0,
+    "VerifiableCoverage": 1.0,
+    "Verifiable_n": 2,
+    "JudgedCoverage": null,
+    "Judged_n": 0
+  },
+  "lsc_per_key": {
+    "string-concat#u0#b0": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass"
+      ],
+      "verified": true
+    },
+    "string-concat#u1#b0": {
+      "status": "Pass",
+      "verdicts": [
+        "Pass"
+      ],
+      "verified": true
+    }
+  },
+  "lsc_per_task": {
+    "t_string_concat": {
+      "string-concat#u0#b0": "Pass",
+      "string-concat#u1#b0": "Pass"
+    }
+  }
+}

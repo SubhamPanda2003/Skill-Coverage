@@ -1,0 +1,40 @@
+{
+  "assertion_results": [
+    {
+      "text": "Catch specific exception types instead of using a bare `except:` clause.",
+      "lsc_key": "error-handling#u0#b0",
+      "passed": true,
+      "evidence": "No bare 'except:' clause found"
+    },
+    {
+      "text": "Always chain the original exception using `raise NewError(msg) from err` when re-raising inside an except block.",
+      "lsc_key": "error-handling#u1#b0",
+      "passed": true,
+      "evidence": "Found chained raise: 'raise ParseError(f\"Invalid JSON in file: {path}\") from err'"
+    },
+    {
+      "text": "If the error is recoverable then log a warning and continue execution, and if the error is unrecoverable then raise immediately.",
+      "lsc_key": "error-handling#u2#b0",
+      "passed": true,
+      "evidence": "The code logs a warning and continues (via `continue`) on the recoverable `FileNotFoundError`, while immediately raising the unrecoverable `ParseError` from a `json.JSONDecodeError` with no continuation."
+    },
+    {
+      "text": "If the error is recoverable then log a warning and continue execution, and if the error is unrecoverable then raise immediately.",
+      "lsc_key": "error-handling#u2#b1",
+      "passed": true,
+      "evidence": "The code logs a warning and continues (`logger.warning(\"Skipping missing file: %s\", path); continue`) for the recoverable missing-file case, and raises immediately (`raise ParseError(...) from err`) for the unrecoverable invalid-JSON case."
+    },
+    {
+      "text": "Never use exceptions to control normal program flow.",
+      "lsc_key": "error-handling#u3#b0",
+      "passed": true,
+      "evidence": "The artifact only uses exceptions for genuine error signaling \u2014 catching `FileNotFoundError`/`json.JSONDecodeError` around I/O and parsing calls and raising the task-required `ParseError` for invalid JSON \u2014 rather than using raise/except as a substitute for ordinary conditional branching, loop termination, or return values."
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  }
+}

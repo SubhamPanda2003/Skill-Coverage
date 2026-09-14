@@ -1,0 +1,16 @@
+{
+  "assertion_results": [
+    {
+      "text": "Always use single quotes for Python string literals, never double quotes.",
+      "lsc_key": "quote-style#u0#b0",
+      "passed": false,
+      "evidence": "single-quoted string found: False, double-quoted string found: True"
+    }
+  ],
+  "summary": {
+    "passed": 0,
+    "failed": 1,
+    "total": 1,
+    "pass_rate": 0.0
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "assertion_results": [
+    {
+      "text": "Keep the summary line under 50 characters.",
+      "lsc_key": "commit-messages#u1#b0",
+      "passed": true,
+      "evidence": "First line is 44 chars: 'Reject email addresses longer than 254 chars'"
+    }
+  ],
+  "summary": {
+    "passed": 1,
+    "failed": 0,
+    "total": 1,
+    "pass_rate": 1.0
+  }
+}

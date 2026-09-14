@@ -1,0 +1,22 @@
+{
+  "assertion_results": [
+    {
+      "text": "Always name variables in camelCase, never snake_case.",
+      "lsc_key": "variable-naming#u0#b0",
+      "passed": false,
+      "evidence": "camelCase assignment found: False, snake_case assignment found: False"
+    },
+    {
+      "text": "And always start with panda...",
+      "lsc_key": "variable-naming#u1#b0",
+      "passed": false,
+      "evidence": "No identifier starting with 'panda' was assigned"
+    }
+  ],
+  "summary": {
+    "passed": 0,
+    "failed": 2,
+    "total": 2,
+    "pass_rate": 0.0
+  }
+}

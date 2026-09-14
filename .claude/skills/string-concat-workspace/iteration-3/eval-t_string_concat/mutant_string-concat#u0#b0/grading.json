@@ -1,0 +1,16 @@
+{
+  "assertion_results": [
+    {
+      "text": "Always build strings using the + operator, never f-strings.",
+      "lsc_key": "string-concat#u0#b0",
+      "passed": false,
+      "evidence": "f-string found: True, '+' present: False"
+    }
+  ],
+  "summary": {
+    "passed": 0,
+    "failed": 1,
+    "total": 1,
+    "pass_rate": 0.0
+  }
+}

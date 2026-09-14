@@ -1,0 +1,143 @@
+{
+  "note": "Evals that deliberately target 2+ skills loaded together, to test cross-skill conflict coverage. This is an LSC extension -- the base agentskills.io spec has no concept of a multi-skill eval; a plain spec-compliant tool should ignore this file.",
+  "evals": [
+    {
+      "id": "t_code_consistent",
+      "prompt": "Write a Python function and format the code with proper indentation.",
+      "expected_output": "A single Python function, indented consistently in one style throughout.",
+      "assertions": [
+        {
+          "text": "Always use tabs for indentation when writing code.",
+          "lsc_key": "indent-tabs#u0#b0"
+        },
+        {
+          "text": "End every file with a trailing newline character.",
+          "lsc_key": "indent-tabs#u1#b0"
+        },
+        {
+          "text": "Always use spaces for indentation when writing code.",
+          "lsc_key": "indent-spaces#u0#b0"
+        }
+      ],
+      "lsc_targets": [
+        [
+          "indent-tabs",
+          0,
+          0
+        ],
+        [
+          "indent-tabs",
+          1,
+          0
+        ],
+        [
+          "indent-spaces",
+          0,
+          0
+        ]
+      ],
+      "skills": [
+        "indent-spaces",
+        "indent-tabs"
+      ]
+    },
+    {
+      "id": "t_code_mixed",
+      "prompt": "Write a Python module and format the code with proper indentation.",
+      "expected_output": "A Python module with several functions, indented consistently in one style throughout the file.",
+      "assertions": [
+        {
+          "text": "Always use tabs for indentation when writing code.",
+          "lsc_key": "indent-tabs#u0#b0"
+        },
+        {
+          "text": "End every file with a trailing newline character.",
+          "lsc_key": "indent-tabs#u1#b0"
+        },
+        {
+          "text": "Always use spaces for indentation when writing code.",
+          "lsc_key": "indent-spaces#u0#b0"
+        }
+      ],
+      "lsc_targets": [
+        [
+          "indent-tabs",
+          0,
+          0
+        ],
+        [
+          "indent-tabs",
+          1,
+          0
+        ],
+        [
+          "indent-spaces",
+          0,
+          0
+        ]
+      ],
+      "skills": [
+        "indent-spaces",
+        "indent-tabs"
+      ]
+    },
+    {
+      "id": "t_combo_err_doc",
+      "prompt": "Write a Python function that safely converts a string to an integer, using a custom InvalidInputError for invalid input. Include a docstring.",
+      "expected_output": "A string-to-int converter that raises a custom InvalidInputError with the original exception chained, documented with a complete docstring.",
+      "assertions": [
+        {
+          "text": "Catch specific exception types instead of using a bare `except:` clause.",
+          "lsc_key": "error-handling#u0#b0"
+        },
+        {
+          "text": "Always chain the original exception using `raise NewError(msg) from err` when re-raising inside an except block.",
+          "lsc_key": "error-handling#u1#b0"
+        },
+        {
+          "text": "Start every docstring with a single-line summary written in the imperative mood.",
+          "lsc_key": "docstring-style#u1#b0"
+        },
+        {
+          "text": "If the function takes parameters then document every parameter under `Args:`, and if the function can raise an exception then document it under `Raises:`.",
+          "lsc_key": "docstring-style#u2#b0"
+        },
+        {
+          "text": "If the function takes parameters then document every parameter under `Args:`, and if the function can raise an exception then document it under `Raises:`.",
+          "lsc_key": "docstring-style#u2#b1"
+        }
+      ],
+      "lsc_targets": [
+        [
+          "error-handling",
+          0,
+          0
+        ],
+        [
+          "error-handling",
+          1,
+          0
+        ],
+        [
+          "docstring-style",
+          1,
+          0
+        ],
+        [
+          "docstring-style",
+          2,
+          0
+        ],
+        [
+          "docstring-style",
+          2,
+          1
+        ]
+      ],
+      "skills": [
+        "docstring-style",
+        "error-handling"
+      ]
+    }
+  ]
+}

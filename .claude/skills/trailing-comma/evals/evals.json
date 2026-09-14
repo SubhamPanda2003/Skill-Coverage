@@ -1,0 +1,24 @@
+{
+  "skill_name": "trailing-comma",
+  "evals": [
+    {
+      "id": "t_trailing_comma",
+      "prompt": "Write a Python list literal, spread across multiple lines, containing five programming language names.",
+      "expected_output": "A multi-line Python list of five programming language names.",
+      "assertions": [
+        {
+          "text": "Always include a trailing comma after the last element in a multi-line Python list, tuple, or dict.",
+          "lsc_key": "trailing-comma#u0#b0"
+        }
+      ],
+      "lsc_targets": [
+        [
+          "trailing-comma",
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "note": "Design prediction for this session's 25-skill expansion: 'uncertain' -- does this instruction plausibly cut against a pretrained default (fight), align with one (align), or is it genuinely unclear (uncertain)? See docs/results.md Part 5."
+}

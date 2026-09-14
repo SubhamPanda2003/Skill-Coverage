@@ -1,0 +1,22 @@
+{
+  "assertion_results": [
+    {
+      "text": "Always build strings using the + operator, never f-strings.",
+      "lsc_key": "string-concat#u0#b0",
+      "passed": false,
+      "evidence": "f-string found: True, '+' present: False"
+    },
+    {
+      "text": "Also if there is vowels in the statement replace it with x",
+      "lsc_key": "string-concat#u1#b0",
+      "passed": false,
+      "evidence": "vowel-free string literal (3+ letters) found: False"
+    }
+  ],
+  "summary": {
+    "passed": 0,
+    "failed": 2,
+    "total": 2,
+    "pass_rate": 0.0
+  }
+}

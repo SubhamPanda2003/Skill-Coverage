@@ -28,6 +28,8 @@ def run_funnel(skills, tasks, trajectories):
         per_task[task["id"]] = {}
         for key in task["expects"]:
             skill_name = key[0]
+            if key not in instantiated:
+                continue  # key's skill isn't in this call's `skills` subset
             instantiated[key] = True
             if skill_name in activated:
                 verdict = oracle.evaluate(*key, traj["artifact"], traj.get("judged_verdicts"))

@@ -1,0 +1,24 @@
+{
+  "skill_name": "measurement-units",
+  "evals": [
+    {
+      "id": "t_measurement_units",
+      "prompt": "Write a Python function that calculates the total distance of a trip given several legs of the journey.",
+      "expected_output": "A function summing trip leg distances.",
+      "assertions": [
+        {
+          "text": "Always express distances and weights in miles and pounds, never kilometers or kilograms.",
+          "lsc_key": "measurement-units#u0#b0"
+        }
+      ],
+      "lsc_targets": [
+        [
+          "measurement-units",
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "note": "Design prediction for this session's 25-skill expansion: 'fight' -- does this instruction plausibly cut against a pretrained default (fight), align with one (align), or is it genuinely unclear (uncertain)? See docs/results.md Part 5."
+}

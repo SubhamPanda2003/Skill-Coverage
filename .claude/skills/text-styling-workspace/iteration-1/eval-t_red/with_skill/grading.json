@@ -1,0 +1,16 @@
+{
+  "assertion_results": [
+    {
+      "text": "If the color of the text is blue then change the font to 20px and if color is red then change it to 30 px.",
+      "lsc_key": "text-styling#u0#b1",
+      "passed": true,
+      "evidence": "Found '30px' in artifact"
+    }
+  ],
+  "summary": {
+    "passed": 1,
+    "failed": 0,
+    "total": 1,
+    "pass_rate": 1.0
+  }
+}

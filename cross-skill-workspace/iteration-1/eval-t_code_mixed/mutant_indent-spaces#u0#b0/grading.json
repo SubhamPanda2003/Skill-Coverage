@@ -1,0 +1,16 @@
+{
+  "assertion_results": [
+    {
+      "text": "Always use spaces for indentation when writing code.",
+      "lsc_key": "indent-spaces#u0#b0",
+      "passed": false,
+      "evidence": "space-indented lines=0, tab-indented lines=55"
+    }
+  ],
+  "summary": {
+    "passed": 0,
+    "failed": 1,
+    "total": 1,
+    "pass_rate": 0.0
+  }
+}

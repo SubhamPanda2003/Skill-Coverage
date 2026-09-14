@@ -1,0 +1,1 @@
+Reject email addresses over 254 chars (RFC 5321)

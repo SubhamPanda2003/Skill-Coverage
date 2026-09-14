@@ -1,0 +1,24 @@
+{
+  "skill_name": "passive-voice",
+  "evals": [
+    {
+      "id": "t_passive_voice",
+      "prompt": "Write three short setup instructions for installing a Python package.",
+      "expected_output": "Three short setup instructions for a package install.",
+      "assertions": [
+        {
+          "text": "Write all instructions in the passive voice, never the imperative.",
+          "lsc_key": "passive-voice#u0#b0"
+        }
+      ],
+      "lsc_targets": [
+        [
+          "passive-voice",
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "note": "Design prediction for this session's 25-skill expansion: 'fight' -- does this instruction plausibly cut against a pretrained default (fight), align with one (align), or is it genuinely unclear (uncertain)? See docs/results.md Part 5."
+}
